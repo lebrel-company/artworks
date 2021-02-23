@@ -33,6 +33,19 @@ var info = [
             established business relationships with a number of global
             leading companies in the entertainment, production, film,
             television, digital content and licensing industries.`
+    },
+    {
+        title: 'What<br>we do',
+        subtitle: 'Our areas of expertise\nwork seamlessly together',
+        text:
+            `We cover all areas of creative entertainment in-house, which enables 
+            us to act as a one stop shop servicing all areas that are necessary 
+            for our clients. We are content distributors, licensors and managers. 
+            We create localized versions of original and external content at our 
+            post-production facilities and we market and sell the final product 
+            as digital media or tangible\nformats. We identify areas of opportunity, 
+            whether traditional or novel,\nand we partner with companies who 
+            are seeking focused strategies for\ntheir portfolio.`
     }
 ]
 
