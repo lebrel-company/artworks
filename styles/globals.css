@@ -1,16 +1,26 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    height: 100vh;
+    background: url('/static/purple.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    height: 100vh;
+    color: white;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.text-yellow-stroke{
+    color: rgba(255,255,255,0);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(250,255,0);
+    font-family: 'source';
 }
 
-* {
-  box-sizing: border-box;
-}

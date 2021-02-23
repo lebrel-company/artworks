@@ -1,0 +1,19 @@
+.menu-btn:before,
+.menu-btn:after {
+    background-color: #fff;
+    content: '';
+    display: block;
+    height: 4px;
+    transition: all 200ms ease-in-out;
+}
+.menu-btn:before {
+    box-shadow: 0 10px 0 #fff;
+    margin-bottom: 16px;
+}
+.menu-btn:hover:before {
+    box-shadow: 0 0 0 #fff;
+    transform: translateY(10px) rotate(45deg);
+}
+.menu-btn:hover:after{
+    transform: translateY(-10px) rotate(-45deg);
+}
