@@ -3,10 +3,9 @@ import Image from 'next/image'
 function Logo(props){
     return(
         <div>
-            <Image
+            <Img
                 src='/logos/artworks.png'
-                alt='Artworks logo'
-                layout='fill'
+                className=''
             />
         </div>
     )

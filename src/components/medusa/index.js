@@ -1,13 +1,9 @@
-import Image from 'next/image'
 
 function Medusa(props) {
     return (
-        <Image
+        <img
             src='/medusa/images/sleeping_blue.png'
-            width={697}
-            height={1024}
-            layout='intrinsic'
-            className='object-fill'
+            className='object-contain h-screen'
         />
     )
 }

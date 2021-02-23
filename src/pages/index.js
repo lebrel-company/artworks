@@ -61,7 +61,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className='fixed right-32'>
+            <div className='h-screen absolute md:right-32 top-1/5'>
                 <Medusa />
             </div>
         </div>
