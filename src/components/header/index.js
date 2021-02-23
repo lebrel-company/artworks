@@ -1,5 +1,4 @@
 import Hamburger from './hamburguer'
-import Image from 'next/image'
 
 function Header(props) {
     return (
@@ -10,7 +9,7 @@ function Header(props) {
             <div className='
                 md:col-span-1 lg:col-span-1 xl:col-span-1
                 '>
-                <Image
+                <img
                     src='/logos/artworks.png'
                     alt='Artworks logo'
                     height={100}
