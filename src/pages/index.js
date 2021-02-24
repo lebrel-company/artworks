@@ -68,15 +68,12 @@ function Home() {
 }
 
 function Section(props) {
-    function _purify(dirtyHtml) {
-        return dirtyHtml
-    }
 
     return (
         <div className='mt-5 mb-80'>
             <div
                 className='
-                    xs:text-6xl sm:text-8xl lg:text-9xl
+                    xs:text-6xl sm:text-8xl lg:text-9xl xl:text-9xl
                     font-source
                     text-yellow-stroke
                     sm:font-black
@@ -86,7 +83,7 @@ function Section(props) {
             <div
                 className='
                     p-3
-                    xs:text-2xl md:text-xl xl:text-2xl
+                    xs:text-2xl md:text-xl lg:text-xl xl:text-5xl
                     font-crimson
                     italic
                 '
