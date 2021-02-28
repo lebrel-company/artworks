@@ -17,24 +17,25 @@ function Home() {
                 bg-white
                 opacity-50
                 fixed
+                inset-y-1/4
                 sm:hidden md:inline-block lg:inline-block
                 sm:w-0 md:w-0.5
                 h-1/2
-                top-96
                 sm:left-5 md:left-10 lg:left-20
             '/>
             <div className='
+                h-3/5
+                top-1/4
                 w-screen
                 xs:px-5 md:px-32
-                pt-80
                 z-10
                 overflow-y-scroll
-                h-screen
                 fixed'
             >
                 <div className='
                 grid
                 w-full
+                h-full
                 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xl:grid-cols-4
                 '>
                     <div className='
@@ -52,16 +53,17 @@ function Home() {
                             })
                         }
                     </div>
-                    <div className='
-                        pb-5
-                        md:col-span-1 lg:col-span-3 xl:col-span-3'
-                    >
-                        <Footer/>
-                    </div>
                 </div>
             </div>
+            <div className='
+                pb-5
+                fixed
+                bottom-4
+                md:col-span-1 lg:col-span-3 xl:col-span-3'>
+                <Footer/>
+            </div>
             <div className='h-screen absolute md:right-32 top-1/5'>
-                <Medusa />
+                <Medusa/>
             </div>
         </div>
     )
