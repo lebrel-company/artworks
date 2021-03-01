@@ -2,9 +2,7 @@ import Hamburger from './hamburguer'
 
 function Header(props) {
     return (
-        <div className='
-            grid
-            xs:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-7'
+        <div className='flex'
         >
             <div className='
                 md:col-span-1 lg:col-span-1 xl:col-span-1
@@ -16,6 +14,11 @@ function Header(props) {
                     width={100}
                     layout='responsive'
                 />
+
+            </div>
+            <div className='flex-grow'></div>
+            <div className=''>
+                <Hamburger/>
             </div>
         </div>
     )

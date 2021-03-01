@@ -64,8 +64,8 @@ var info = [
                 subtitle: '',
                 text:
                     `
-                    <div class="border-yellow-200 relative border-2 rounded-md p-5 m-10">
-                        <div class='text-xxl opacity-10 font-crimson absolute right-4 top-1/5'>1</div>
+                    <div class="border-yellow-200 relative border-4 rounded-md p-5 m-10">
+                        <div class='text-6xl opacity-20 font-crimson relative left-4 top-1/3 m-2'>1</div>
                         <div class='font-source text-3xl italic mb-4'>Film & Television</div>
                         <div class="grid grid-cols-1 gap-5">
                             <div>
@@ -92,8 +92,8 @@ var info = [
                     
                 </div>
                 
-                <div class="border-pink-500 relative border-2 rounded-md p-5 m-10">
-                    <div class='text-xxl opacity-10 font-crimson absolute right-4 top-1/5'>2</div>
+                <div class="border-pink-500 relative border-4 rounded-md p-5 m-10">
+                    <div class='text-6xl opacity-20 font-crimson relative left-4 top-1/3 m-2'>2</div>
                     <div class='font-source text-3xl italic mb-4'>Localization Business</div>
                     <div class="grid grid-cols-1 gap-5">
                         <div>
@@ -110,8 +110,8 @@ var info = [
                     </div>
                 </div>
                 
-                <div class="border-blue-500 relative border-2 rounded-md p-5 m-10">
-                    <div class='text-xxl opacity-10 font-crimson absolute right-4 top-1/5'>3</div>
+                <div class="border-blue-500 relative border-4 rounded-md p-5 m-10">
+                    <div class='text-6xl opacity-20 font-crimson relative left-4 top-1/3 m-2'>3</div>
                     <div class='font-source text-3xl italic mb-4'>Licensing Business</div>
                     <div class="grid grid-cols-1 gap-5">
                         <div>
@@ -127,8 +127,8 @@ var info = [
                     </div>
                 </div>
                 
-                <div class="border-purple-500 relative border-2 rounded-md p-5 m-10">
-                    <div class='text-xxl opacity-10 font-crimson absolute right-4 top-1/5'>4</div>
+                <div class="border-purple-500 relative border-4 rounded-md p-5 m-10">
+                    <div class='text-6xl opacity-20 font-crimson relative left-4 top-1/3 m-2'>4</div>
                     <div class='font-source text-3xl italic mb-4'>Business Development</div>
                     <div class="grid grid-cols-1 gap-5">
                         <div>
@@ -163,7 +163,7 @@ var info = [
         listOfSections: [
             {
                 title: 'Media Content and Film Distribution',
-                subtitle: 'Our areas of expertise work seamlessly together',
+                subtitle: 'Distributing prime content across all media outlets',
                 text:
                     `Combined, Artworks’ team members have sold numerous
                     television series and developed successful merchandise programs
@@ -178,12 +178,47 @@ var info = [
                     blend of contents.`
             },
             {
-                title: '',
-                subtitle: 'Media Content and Film Distribution',
+                title: 'Co-production Opportunities',
+                subtitle: 'Bringing diverse talent together',
                 text:
-                    `We handle the acquisitions, distribution, and/or representation of
-                    live action and animation movies and series, as well as documentaries 
-                    and formats for all systems.`
+                    `We believe in creative talent as something that must be nourished.
+                    The beauty of today’s world is the accessible opportunity for
+                    talented people from diverse areas to combine their views and think
+                    under a single creative mind set. Our job is to work as a bridge
+                    between this talent, producers and distributors.`
+            },
+        ],
+    },
+
+    {
+        heading: `Localization Business`,
+        listOfSections: [
+            {
+                title: 'Dubbing and Post-production',
+                subtitle: 'Offering a wide option of localization services into multiple languages.',
+                text:
+                    `With access to a top-talent network including voice actors,
+                    directors and producers, we operate our own post-production
+                    facilities, thus ensuring high quality and speed of our dubbing
+                    and material distribution. As experts in the field, we also work
+                    with external partners offering the same level of exceptional
+                    quality for our own productions and those of our clients.`
+            },
+            {
+                title: 'Material enhancement and delivery',
+                subtitle: 'Offering a wide option of localization services into multiple languages.',
+                text:
+                    `Artworks can also offer HD, Ultra HD, 5.1 Up-conversion to
+                    be delivered on hard drives with no compression and in
+                    real time, saving costs in shipping and delivery. By using our
+                    state-of-the art equipment and studio, Artworks is proud to
+                    offer full material formatting including video and audio
+                    elements. Our basic services include QC of materials,
+                    translation/adaptation inspection, M&E recording, layback
+                    to Digital Formats in addition to Post-production services
+                    that include title or logo creation and animation, insertion
+                    of episode titles and credits (with clean materials), storage
+                    and material coordination ready for delivery.`
             },
         ],
     },

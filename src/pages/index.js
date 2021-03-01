@@ -37,10 +37,10 @@ function Home() {
                 grid
                 w-full
                 h-full
-                xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xl:grid-cols-4
+                xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2
                 '>
                     <div className='
-                    xs:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2
+                    xs:col-span-1 sm:con-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 2xl:col-span-1
                     sm:left-0 lg:left-10
                 '>
                         {
@@ -58,6 +58,7 @@ function Home() {
             <div className='
                 pb-5
                 fixed
+                z-20
                 bottom-4
                 md:col-span-1 lg:col-span-3 xl:col-span-3'>
                 <Footer/>
@@ -66,6 +67,7 @@ function Home() {
             h-screen
             fixed
             md:right-0
+            xs:hidden md:block
             md:top-1/5'>
                 <Medusa/>
             </div>
@@ -92,7 +94,7 @@ function Section(props) {
                             <div key={i}>
                                 <div className='
                                 p-3
-                                xs:text-xl md:text-xl lg:text-xl xl:text-4xl
+                                xs:text-xl md:text-2xl lg:text-2xl xl:text-5xl
                                 font-crimson
                                 italic'
                                      dangerouslySetInnerHTML={{__html: value.title}}
