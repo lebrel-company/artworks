@@ -40,7 +40,7 @@ function Home() {
                 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xl:grid-cols-4
                 '>
                     <div className='
-                    xs:col-span-1 md:col-span-1 lg:col-span-2 xl:col-span-2
+                    xs:col-span-1 md:col-span-2 lg:col-span-2 xl:col-span-2
                     sm:left-0 lg:left-10
                 '>
                         {
