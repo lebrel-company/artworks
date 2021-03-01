@@ -65,7 +65,7 @@ var info = [
                 text:
                     `
                     <div class="border-yellow-200 relative border-4 rounded-md p-5 m-10">
-                        <div class='text-6xl opacity-20 font-crimson relative left-4 top-1/3 m-2'>1</div>
+                        <div class='text-6xl opacity-40 font-crimson relative left-4 top-1/3 m-2'>1</div>
                         <div class='font-source text-3xl italic mb-4'>Film & Television</div>
                         <div class="grid grid-cols-1 gap-5">
                             <div>
@@ -93,7 +93,7 @@ var info = [
                 </div>
                 
                 <div class="border-pink-500 relative border-4 rounded-md p-5 m-10">
-                    <div class='text-6xl opacity-20 font-crimson relative left-4 top-1/3 m-2'>2</div>
+                    <div class='text-6xl opacity-40 font-crimson relative left-4 top-1/3 m-2'>2</div>
                     <div class='font-source text-3xl italic mb-4'>Localization Business</div>
                     <div class="grid grid-cols-1 gap-5">
                         <div>
@@ -111,7 +111,7 @@ var info = [
                 </div>
                 
                 <div class="border-blue-500 relative border-4 rounded-md p-5 m-10">
-                    <div class='text-6xl opacity-20 font-crimson relative left-4 top-1/3 m-2'>3</div>
+                    <div class='text-6xl opacity-40 font-crimson relative left-4 top-1/3 m-2'>3</div>
                     <div class='font-source text-3xl italic mb-4'>Licensing Business</div>
                     <div class="grid grid-cols-1 gap-5">
                         <div>
@@ -128,7 +128,7 @@ var info = [
                 </div>
                 
                 <div class="border-purple-500 relative border-4 rounded-md p-5 m-10">
-                    <div class='text-6xl opacity-20 font-crimson relative left-4 top-1/3 m-2'>4</div>
+                    <div class='text-6xl opacity-40 font-crimson relative left-4 top-1/3 m-2'>4</div>
                     <div class='font-source text-3xl italic mb-4'>Business Development</div>
                     <div class="grid grid-cols-1 gap-5">
                         <div>

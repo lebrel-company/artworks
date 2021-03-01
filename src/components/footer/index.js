@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function Footer() {
     return (
-        <div>
+        <div className='text-center m-5'>
             {
                 listOfLinks.map(function createLinks(element, i) {
                         if (listOfLinks.length != (i - 1)) {

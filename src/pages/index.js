@@ -35,12 +35,10 @@ function Home() {
             >
                 <div className='
                 grid
-                w-full
-                h-full
-                xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2
+                grid-cols-1 xl:grid-cols-2 2xl:grid-cols-2
                 '>
                     <div className='
-                    xs:col-span-1 sm:con-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 2xl:col-span-1
+                    col-span-1
                     sm:left-0 lg:left-10
                 '>
                         {
@@ -67,7 +65,6 @@ function Home() {
             h-screen
             fixed
             md:right-0
-            xs:hidden md:block
             md:top-1/5'>
                 <Medusa/>
             </div>
@@ -81,7 +78,8 @@ function Section(props) {
         <div className='mt-5 mb-80'>
             <div
                 className='
-                    xs:text-6xl sm:text-8xl lg:text-9xl xl:text-9xl
+
+                    text-7xl lg:text-9xl
                     font-source
                     text-yellow-stroke
                     sm:font-black
