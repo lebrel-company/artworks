@@ -1,3 +1,4 @@
+'use strict';
 import styles from '../../styles/Home.module.css';
 import Head from 'next/head';
 import Header from '../components/header'
@@ -46,9 +47,8 @@ function Home() {
                             info.map(function createInfoSections(info, i) {
                                 return <Section
                                     key={i}
-                                    title={info.title}
-                                    subtitle={info.subtitle}
-                                    text={info.text}
+                                    heading={info.heading}
+                                    listOfSections={info.listOfSections}
                                 />
                             })
                         }
@@ -62,7 +62,11 @@ function Home() {
                 md:col-span-1 lg:col-span-3 xl:col-span-3'>
                 <Footer/>
             </div>
-            <div className='h-screen absolute md:right-32 top-1/5'>
+            <div className='
+            h-screen
+            fixed
+            md:right-0
+            md:top-1/5'>
                 <Medusa/>
             </div>
         </div>
@@ -70,7 +74,7 @@ function Home() {
 }
 
 function Section(props) {
-
+    console.log(props)
     return (
         <div className='mt-5 mb-80'>
             <div
@@ -80,26 +84,48 @@ function Section(props) {
                     text-yellow-stroke
                     sm:font-black
                 '
-                dangerouslySetInnerHTML={{__html: props.title}}
-            />
-            <div
-                className='
-                    p-3
-                    xs:text-2xl md:text-xl lg:text-xl xl:text-5xl
-                    font-crimson
-                    italic
-                '
-                dangerouslySetInnerHTML={{__html: props.subtitle}}
-            />
-            <div
-                className='
-                    xs:p-0 sm:p-3
-                    md:text-md xl:text-lg
-                    font-poppins
-                    text-justify
-                '
-                dangerouslySetInnerHTML={{__html: props.text}}
-            />
+                dangerouslySetInnerHTML={{__html: props.heading}}>
+            </div>
+            {
+                props.listOfSections.map(function (value) {
+                        return (
+                            <div>
+                                <div className='
+                                p-3
+                                xs:text-xl md:text-xl lg:text-xl xl:text-4xl
+                                font-crimson
+                                italic'
+                                     dangerouslySetInnerHTML={{__html: value.title}}
+                                />
+
+                                {
+                                    function subtitleCondition() {
+                                        if (value.subtitle !== '') {
+                                            return (
+                                                <div
+                                                    className='
+                                                    p-3
+                                                    xs:text-2xl md:text-xl lg:text-xl xl:text-3xl
+                                                    font-crimson
+                                                    italic'
+                                                    dangerouslySetInnerHTML={{__html: value.subtitle}}/>
+                                            )
+                                        }
+                                    }()
+                                }
+
+                                <div className='
+                                xs:p-0 sm:p-3
+                                md:text-md xl:text-lg
+                                font-poppins
+                                text-justify'
+                                     dangerouslySetInnerHTML={{__html: value.text}}
+                                />
+                            </div>
+                        )
+                    }
+                )
+            }
         </div>
     )
 }

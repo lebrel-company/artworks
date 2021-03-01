@@ -1,5 +1,6 @@
+
 module.exports = {
-    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+    purge: ['./scr/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
     future:{
         removeDeprecatedGapUtilities: true,
         purgeLayersByDefault:true
@@ -8,7 +9,11 @@ module.exports = {
         fontFamily: {
             'source': ['Source Serif Pro', 'serif'],
             'crimson': ['Crimson Text', 'serif'],
-            'poppins': ['Poppins', 'sans-serif']
+            'poppins': ['Poppins', 'sans-serif'],
+            'ballet': ['Ballet', 'cursive'],
+        },
+        fontSize:{
+            'xxl': '10rem'
         },
         screens: {
             'xs': '320px',

@@ -14,7 +14,14 @@ class MyDocument extends Document {
                 >
 
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Poppins&family=Source+Serif+Pro:weight@900&display=swap"
+                        href={
+                            `https://fonts.googleapis.com/css2?
+                            family=Crimson+Text&
+                            family=Poppins&
+                            family=Source+Serif+Pro:weight@900&
+                            family=Ballet&
+                            display=swap`
+                        }
                         rel="stylesheet" />
                     <link
                         rel="stylesheet"
