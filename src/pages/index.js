@@ -87,9 +87,9 @@ function Section(props) {
                 dangerouslySetInnerHTML={{__html: props.heading}}>
             </div>
             {
-                props.listOfSections.map(function (value) {
+                props.listOfSections.map(function (value, i) {
                         return (
-                            <div>
+                            <div key={i}>
                                 <div className='
                                 p-3
                                 xs:text-xl md:text-xl lg:text-xl xl:text-4xl
