@@ -19,6 +19,7 @@ var info = [
             },
         ],
     },
+
     {
         heading: `Who we are today`,
         listOfSections: [
@@ -64,14 +65,7 @@ var info = [
                 text:
                     `
                     <div class="border-yellow-200 relative border-2 rounded-md p-5 m-10">
-                        <div class='
-                        text-xxl 
-                        opacity-10
-                        font-crimson
-                        absolute  
-                        right-4
-                        top-1/5
-                        '>1</div>
+                        <div class='text-xxl opacity-10 font-crimson absolute right-4 top-1/5'>1</div>
                         <div class='font-source text-3xl italic mb-4'>Film & Television</div>
                         <div class="grid grid-cols-1 gap-5">
                             <div>
@@ -95,17 +89,11 @@ var info = [
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
+                
                 <div class="border-pink-500 relative border-2 rounded-md p-5 m-10">
-                    <div class='
-                    text-xxl 
-                    opacity-10 
-                    font-crimson
-                    absolute  
-                    right-4
-                    top-1/5
-                    '>2</div>
+                    <div class='text-xxl opacity-10 font-crimson absolute right-4 top-1/5'>2</div>
                     <div class='font-source text-3xl italic mb-4'>Localization Business</div>
                     <div class="grid grid-cols-1 gap-5">
                         <div>
@@ -121,15 +109,9 @@ var info = [
                         </div>
                     </div>
                 </div>
+                
                 <div class="border-blue-500 relative border-2 rounded-md p-5 m-10">
-                    <div class='
-                    text-xxl 
-                    opacity-10 
-                    font-crimson
-                    absolute  
-                    right-4
-                    top-1/5
-                    '>3</div>
+                    <div class='text-xxl opacity-10 font-crimson absolute right-4 top-1/5'>3</div>
                     <div class='font-source text-3xl italic mb-4'>Licensing Business</div>
                     <div class="grid grid-cols-1 gap-5">
                         <div>
@@ -144,15 +126,9 @@ var info = [
                         </div>
                     </div>
                 </div>
+                
                 <div class="border-purple-500 relative border-2 rounded-md p-5 m-10">
-                    <div class='
-                    text-xxl 
-                    opacity-10
-                    font-crimson
-                    absolute  
-                    right-4
-                    top-1/5
-                    '>4</div>
+                    <div class='text-xxl opacity-10 font-crimson absolute right-4 top-1/5'>4</div>
                     <div class='font-source text-3xl italic mb-4'>Business Development</div>
                     <div class="grid grid-cols-1 gap-5">
                         <div>
@@ -181,6 +157,7 @@ var info = [
             },
         ],
     },
+
     {
         heading: `Film & Television`,
         listOfSections: [
