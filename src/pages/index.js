@@ -78,7 +78,6 @@ function Section(props) {
         <div className='mt-5 mb-80'>
             <div
                 className='
-
                     text-7xl lg:text-9xl
                     font-source
                     text-yellow-stroke
