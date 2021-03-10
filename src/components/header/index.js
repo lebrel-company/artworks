@@ -1,22 +1,24 @@
 import Hamburger from './hamburguer'
+import Link from 'next/link'
 
 function Header(props) {
     return (
-        <div className='flex'
-        >
+        <div className='
+        flex justify-between items-center w-full
+        '>
             <div className='
-                md:col-span-1 lg:col-span-1 xl:col-span-1
+                md:col-span-1 lg:col-span-1 xl:col-span-1 header-logo
                 '>
-                <img
-                    src='/logos/artworks.png'
-                    alt='Artworks logo'
-                    height={100}
-                    width={100}
-                    layout='responsive'
-                />
-
+                <img src='/logos/artworks.png' alt='Artworks logo' layout='responsive'/>
             </div>
-            <div className='flex-grow'></div>
+            <div className='font-crimson text-xl'>
+                <Link href='/showreel'>
+                    <a className='
+                    hover:underline
+                    '
+                    >Showreel</a>
+                </Link>
+            </div>
             <div className=''>
                 <Hamburger/>
             </div>

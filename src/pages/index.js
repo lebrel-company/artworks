@@ -2,72 +2,46 @@
 import styles from '../../styles/Home.module.css';
 import Head from 'next/head';
 import Header from '../components/header'
-import Medusa from '../components/medusa'
 import Footer from '../components/footer'
 
 import {info} from '../content/homepage'
 
 function Home() {
     return (
-        <div className='
-        '>
-            <div className='z-10 w-screen xs:px-10 md:px-20 h-20  top-10 fixed'>
+        <div className='w-screen h-screen'>
+            <div className='z-10 p-8 relative z-20'>
                 <Header/>
             </div>
-            <div className='
-                bg-white
-                opacity-50
-                fixed
-                inset-y-1/4
-                sm:hidden md:inline-block lg:inline-block
-                sm:w-0 md:w-0.5
-                h-1/2
-                sm:left-5 md:left-10 lg:left-20
-            '/>
-            <div className='
-                h-3/5
-                top-1/4
-                w-screen
-                xs:px-5 md:px-32
-                z-10
-                overflow-y-scroll
-                fixed'
-            >
-                <div className='
-                grid
-                grid-cols-1 xl:grid-cols-2 2xl:grid-cols-2
-                '>
-                    <div className='
-                    col-span-1
-                    sm:left-0 lg:left-10
-                '>
-                        {
-                            info.map(function createInfoSections(info, i) {
-                                return <Section
-                                    key={i}
-                                    heading={info.heading}
-                                    listOfSections={info.listOfSections}
-                                />
-                            })
-                        }
-                    </div>
+            <div
+                className='
+                flex
+                relative z-20
+                p-4 xl:pl-28
+                xl:w-1/2 h-3/4'>
+                <div className='h-full hidden lg:inline-block'>
+                   <div className='bg-white w-1 h-full opacity-50 rounded-sm'/>
+                </div>
+                <div className='overflow-y-scroll md:px-10 py-10'>
+                    {
+                        info.map(function createInfoSections(info, i) {
+                            return <Section
+                                key={i}
+                                heading={info.heading}
+                                listOfSections={info.listOfSections}
+                            />
+                        })
+                    }
                 </div>
             </div>
-            <div className='
-                pb-5
-                fixed
-                z-20
-                bottom-4
-                md:col-span-1 lg:col-span-3 xl:col-span-3'>
-                <Footer/>
+            <div className='w-screen fixed bottom-0 z-20'>
+                <div className='xl:w-1/2'>
+                    <Footer/>
+                </div>
             </div>
-            <div className='
-            h-screen
-            fixed
-            md:right-0
-            md:top-1/5'>
-                <Medusa/>
-            </div>
+                <img
+                    src='/medusa/images/sleeping_blue.png'
+                    className='fixed object-contain top-0 h-screen md:right-8 z-0'
+                />
         </div>
     )
 }
