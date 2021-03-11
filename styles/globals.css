@@ -43,7 +43,8 @@ body {
         tracking-wide
         opacity-60
         my-4
-        text-xl
+        text-base
+        md:text-xl
         font-poppins
         hover:text-yellow-200
         hover:opacity-100

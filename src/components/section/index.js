@@ -96,100 +96,92 @@ export default function Section(props) {
                          {__html: info.whatWeDo.section01.text}
                      }
                 />
-                <div className='w-full h-full'>
-                    <div ref={oneBullet}
-                         onMouseOver={() => handleOnHover(setOneHovering, oneHovering)}
-                         onMouseLeave={() => handleLeave(setOneHovering, oneHovering)}
-                         className='bullet'>
-                        {info.whatWeDo.bullets.one.header}
+                <div className='flex'>
+                    <div className='grid grid-flow-col my-10 flex-auto'>
+                        <div ref={oneBullet}
+                             onMouseOver={() => handleOnHover(setOneHovering, oneHovering)}
+                             onMouseLeave={() => handleLeave(setOneHovering, oneHovering)}
+                             className='bullet row-start-1 col-start-1'>
+                            {info.whatWeDo.bullets.one.header}
+                        </div>
+                        <div ref={twoBullet}
+                             onMouseOver={() => handleOnHover(setTwoHovering, twoHovering)}
+                             onMouseLeave={() => handleLeave(setTwoHovering, twoHovering)}
+                             className='bullet row-start-2 col-start-1'>
+                            {info.whatWeDo.bullets.two.header}
+                        </div>
+                        <div ref={threeBullet}
+                             onMouseOver={() => handleOnHover(setThreeHovering, threeHovering)}
+                             onMouseLeave={() => handleLeave(setThreeHovering, threeHovering)}
+                             className='bullet row-span-3 col-start-1'>
+                            {info.whatWeDo.bullets.three.header}
+                        </div>
+                        <div ref={fourBullet}
+                             onMouseOver={() => handleOnHover(setFourHovering, fourHovering)}
+                             onMouseLeave={() => handleLeave(setFourHovering, fourHovering)}
+                             className='bullet row-start-4 col-start-1'>
+                            {info.whatWeDo.bullets.four.header}
+                        </div>
                     </div>
-                    {
-                        oneHovering && (
-                            <div
-                                ref={oneContent}
-                                className='
-                                    w-full px-10
-                                    transition-opacity
-                                    relative right-0
+                    <div className='container my-auto w-1/2'>
+                        {
+                            oneHovering && (
+                                <div
+                                    ref={oneContent}
+                                    className='
                                     font-poppins
-                                    transition-opacity duration-500 ease-in opacity-100
                                     text-sm text-justify'>
+                                    <div
+                                        className=''>{info.whatWeDo.bullets.one.title}</div>
+                                    <div
+                                        className=''>{info.whatWeDo.bullets.one.text}</div>
+                                </div>
+                            )
+                        }
+                        {
+                            twoHovering && (
                                 <div
-                                    className=''>{info.whatWeDo.bullets.one.title}</div>
+                                    ref={twoContent}
+                                    className='
+                                    font-poppins
+                                    text-sm text-justify'>
+                                    <div
+                                        className=''>{info.whatWeDo.bullets.two.title}</div>
+                                    <div
+                                        className=''>{info.whatWeDo.bullets.two.text}</div>
+                                </div>
+                            )
+                        }
+                        {
+                            threeHovering && (
                                 <div
-                                    className=''>{info.whatWeDo.bullets.one.text}</div>
-                            </div>
-                        )
-                    }
-                </div>
-                <div className='w-full h-full'>
-                    <div ref={twoBullet}
-                         onMouseOver={() => handleOnHover(setTwoHovering, twoHovering)}
-                         onMouseLeave={() => handleLeave(setTwoHovering, twoHovering)}
-                         className='bullet'>
-                        {info.whatWeDo.bullets.two.header}
+                                    ref={threeContent}
+                                    className='
+                                    font-poppins
+                                    text-sm text-justify'>
+                                    <div
+                                        className=''>{info.whatWeDo.bullets.three.title}</div>
+                                    <div
+                                        className=''>{info.whatWeDo.bullets.three.text}</div>
+                                </div>
+                            )
+                        }
+                        {
+                            fourHovering && (
+                                <div
+                                    ref={fourContent}
+                                    className='
+                                    font-poppins
+                                    text-sm text-justify'>
+                                    <div
+                                        className=''>{info.whatWeDo.bullets.four.title}</div>
+                                    <div
+                                        className=''
+                                        dangerouslySetInnerHTML={{__html: info.whatWeDo.bullets.four.text}}/>
+                                </div>
+                            )
+                        }
                     </div>
-                    {
-                        twoHovering && (
-                            <div
-                                ref={twoContent}
-                                className='
-                                    w-full px-10
-                                    relative right-0 font-poppins
-                                    text-sm text-justify'>
-                                <div
-                                    className=''>{info.whatWeDo.bullets.two.title}</div>
-                                <div
-                                    className=''>{info.whatWeDo.bullets.two.text}</div>
-                            </div>
-                        )
-                    }
-                </div>
-                <div className='w-full h-full'>
-                    <div ref={threeBullet}
-                         onMouseOver={() => handleOnHover(setThreeHovering, threeHovering)}
-                         onMouseLeave={() => handleLeave(setThreeHovering, threeHovering)}
-                         className='bullet'>
-                        {info.whatWeDo.bullets.three.header}
-                    </div>
-                    {
-                        threeHovering && (
-                            <div
-                                ref={threeContent}
-                                className='
-                                    w-full px-10
-                                    relative right-0 font-poppins
-                                    text-sm text-justify'>
-                                <div
-                                    className=''>{info.whatWeDo.bullets.three.title}</div>
-                                <div
-                                    className=''>{info.whatWeDo.bullets.three.text}</div>
-                            </div>
-                        )
-                    }
-                </div>
-                <div className='w-full h-full'>
-                    <div ref={fourBullet}
-                         onMouseOver={() => handleOnHover(setFourHovering, fourHovering)}
-                         onMouseLeave={() => handleLeave(setFourHovering, fourHovering)}
-                         className='bullet'>
-                        {info.whatWeDo.bullets.four.header}
-                    </div>
-                    {
-                        fourHovering && (
-                            <div
-                                ref={fourContent}
-                                className='
-                                    w-full px-10
-                                    relative right-0 font-poppins
-                                    text-sm text-justify'>
-                                <div
-                                    className='' >{info.whatWeDo.bullets.four.title}</div>
-                                <div
-                                    className='' dangerouslySetInnerHTML={{__html:info.whatWeDo.bullets.four.text}}/>
-                            </div>
-                        )
-                    }
                 </div>
             </div>
         </div>
@@ -205,14 +197,14 @@ var info = {
             subtitle: '',
             text:
                 `Our story begins in 2011 when Artworks Brands was established in California as a
-            distributor of TV and Film content. As the entertainment world evolved, so did our
-            ability to look to the future of producing original content and in-house management of
-            all creative and business aspects that make a property successful. We became
-            Artworks Entertainment in 2015 after consolidating our core business areas and
-            moving our headquarters to the vibrant metropolis of Mexico City. Today, with
-            affiliated offices in Mexico, Sao Paulo, Seattle, Tokyo, Hong Kong and Brussels, we are
-            a company with a global reach that offers a wide array of entertainment options across
-            various genres and generations.`
+distributor of TV and Film content. As the entertainment world evolved, so did our
+ability to look to the future of producing original content and in-house management of
+all creative and business aspects that make a property successful. We became
+Artworks Entertainment in 2015 after consolidating our core business areas and
+moving our headquarters to the vibrant metropolis of Mexico City. Today, with
+affiliated offices in Mexico, Sao Paulo, Seattle, Tokyo, Hong Kong and Brussels, we are
+a company with a global reach that offers a wide array of entertainment options across
+various genres and generations.`
 
         }
     },
@@ -224,18 +216,18 @@ var info = {
             subtitle: '',
             text:
                 `Like any true artist, we believe in the individuality and
-                    creative power behind each project we undertake. We are
-                    proud to provide unified creative, business and successful
-                    communications solutions with the highest standards. With
-                    our Film and Television, Localization, Licensing and
-                    Merchandising and Business Development units, we have a
-                    comprehensive business approach paired with effective and
-                    creative ideas developed by a passionate team. Bolstered
-                    by our status as a single company with multiple talents,
-                    Artworks Entertainment is proud to have unbeatable and
-                    established business relationships with a number of global
-                    leading companies in the entertainment, production, film,
-                    television, digital content and licensing industries.`
+creative power behind each project we undertake. We are
+proud to provide unified creative, business and successful
+communications solutions with the highest standards. With
+our Film and Television, Localization, Licensing and
+Merchandising and Business Development units, we have a
+comprehensive business approach paired with effective and
+creative ideas developed by a passionate team. Bolstered
+by our status as a single company with multiple talents,
+Artworks Entertainment is proud to have unbeatable and
+established business relationships with a number of global
+leading companies in the entertainment, production, film,
+television, digital content and licensing industries.`
         },
     },
     whatWeDo: {
@@ -246,13 +238,13 @@ var info = {
             subtitle: '',
             text:
                 `We cover all areas of creative entertainment in-house, which enables us to
-                    act as a one stop shop servicing all areas that are necessary for our clients.
-                    We are content distributors, licensors and managers. We create localized
-                    versions of original and external content at our post-production facilities
-                    and we market and sell the final product as digital media or tangible
-                    formats. We identify areas of opportunity, whether traditional or novel,
-                    and we partner with companies who are seeking focused strategies for
-                    their portfolio.`
+act as a one stop shop servicing all areas that are necessary for our clients.
+We are content distributors, licensors and managers. We create localized
+versions of original and external content at our post-production facilities
+and we market and sell the final product as digital media or tangible
+formats. We identify areas of opportunity, whether traditional or novel,
+and we partner with companies who are seeking focused strategies for
+their portfolio.`
 
         },
         bullets: {
@@ -260,44 +252,44 @@ var info = {
                 header: '01.FILM AND TELEVISION',
                 subtitle: 'Media Content & Film Distribution',
                 text: `
-                    We handle the acquisitions, distribution, and/or representation of
-                    live action and animation movies and series, as well as documentaries
-                    and formats for all systems.
-                    `
+We handle the acquisitions, distribution, and/or representation of
+live action and animation movies and series, as well as documentaries
+and formats for all systems.
+`
             },
             two: {
                 header: '02.LOCALIZATION BUSINESS',
                 subtitle: 'Dubbing and Post-production',
                 text: `
-                    We operate our own post-production facilities thus ensuring high
-                    quality and speed of our dubbing and material distribution. As
-                    experts in the field, we also work with external partners offering
-                    the same level of exceptional quality.
-                `
+We operate our own post-production facilities thus ensuring high
+quality and speed of our dubbing and material distribution. As
+experts in the field, we also work with external partners offering
+the same level of exceptional quality.
+`
             },
             three: {
                 header: '03.LICENSING BUSINESS',
                 subtitle: 'Licensing & Merchandising',
                 text: `
-                    We work as dedicated brand ambassadors opening an endless
-                    world of opportunities. Making products come to life and
-                    connecting these with the target consumers.
-                `
+We work as dedicated brand ambassadors opening an endless
+world of opportunities. Making products come to life and
+connecting these with the target consumers.
+`
             },
-            four:{
+            four: {
                 header: '04.BUSINESS DEVELOPMENT',
                 subtitle: '',
-                text:`
-                <div class="text-lg">Strategic Planning and Marketing</div>
-                We think ahead the game and create tailored-strategies for the
-                brands we represent. Combining local know-how with worldwide
-                thinking.
-                <div class="text-lg">DIGITAL MEDIA AND PR</div>
-                We manage Social and Digital Media platforms driving sales and
-                revenue through use of new outlets. We build a solid reputation
-                that people believe in.
-                
-                `
+                text: `
+<div class="text-lg">Strategic Planning and Marketing</div>
+We think ahead the game and create tailored-strategies for the
+brands we represent. Combining local know-how with worldwide
+thinking.
+<div class="text-lg">DIGITAL MEDIA AND PR</div>
+We manage Social and Digital Media platforms driving sales and
+revenue through use of new outlets. We build a solid reputation
+that people believe in.
+
+`
             }
         }
     }
