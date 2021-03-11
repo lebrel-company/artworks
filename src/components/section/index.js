@@ -123,7 +123,7 @@ export default function Section(props) {
                             {info.whatWeDo.bullets.four.header}
                         </div>
                     </div>
-                    <div className='container my-auto w-1/2'>
+                    <div className='container my-auto w-1/2 p-2'>
                         {
                             oneHovering && (
                                 <div
