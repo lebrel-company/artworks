@@ -37,7 +37,7 @@ export default function Section(props) {
 
     return (
         <div className='md:my-10 mx-10' style={{direction: 'ltr'}}>
-            <div className='mx-10'>
+            <div className=''>
                 <div className='text-yellow-stroke'
                      dangerouslySetInnerHTML={{__html: info.ourHistory.heading}}
                 />
@@ -197,14 +197,14 @@ var info = {
             subtitle: '',
             text:
                 `Our story begins in 2011 when Artworks Brands was established in California as a
-distributor of TV and Film content. As the entertainment world evolved, so did our
-ability to look to the future of producing original content and in-house management of
-all creative and business aspects that make a property successful. We became
-Artworks Entertainment in 2015 after consolidating our core business areas and
-moving our headquarters to the vibrant metropolis of Mexico City. Today, with
-affiliated offices in Mexico, Sao Paulo, Seattle, Tokyo, Hong Kong and Brussels, we are
-a company with a global reach that offers a wide array of entertainment options across
-various genres and generations.`
+                distributor of TV and Film content. As the entertainment world evolved, so did our
+                ability to look to the future of producing original content and in-house management of
+                all creative and business aspects that make a property successful. We became
+                Artworks Entertainment in 2015 after consolidating our core business areas and
+                moving our headquarters to the vibrant metropolis of Mexico City. Today, with
+                affiliated offices in Mexico, Sao Paulo, Seattle, Tokyo, Hong Kong and Brussels, we are
+                a company with a global reach that offers a wide array of entertainment options across
+                various genres and generations.`
 
         }
     },
@@ -216,18 +216,18 @@ various genres and generations.`
             subtitle: '',
             text:
                 `Like any true artist, we believe in the individuality and
-creative power behind each project we undertake. We are
-proud to provide unified creative, business and successful
-communications solutions with the highest standards. With
-our Film and Television, Localization, Licensing and
-Merchandising and Business Development units, we have a
-comprehensive business approach paired with effective and
-creative ideas developed by a passionate team. Bolstered
-by our status as a single company with multiple talents,
-Artworks Entertainment is proud to have unbeatable and
-established business relationships with a number of global
-leading companies in the entertainment, production, film,
-television, digital content and licensing industries.`
+                creative power behind each project we undertake. We are
+                proud to provide unified creative, business and successful
+                communications solutions with the highest standards. With
+                our Film and Television, Localization, Licensing and
+                Merchandising and Business Development units, we have a
+                comprehensive business approach paired with effective and
+                creative ideas developed by a passionate team. Bolstered
+                by our status as a single company with multiple talents,
+                Artworks Entertainment is proud to have unbeatable and
+                established business relationships with a number of global
+                leading companies in the entertainment, production, film,
+                television, digital content and licensing industries.`
         },
     },
     whatWeDo: {
@@ -238,58 +238,56 @@ television, digital content and licensing industries.`
             subtitle: '',
             text:
                 `We cover all areas of creative entertainment in-house, which enables us to
-act as a one stop shop servicing all areas that are necessary for our clients.
-We are content distributors, licensors and managers. We create localized
-versions of original and external content at our post-production facilities
-and we market and sell the final product as digital media or tangible
-formats. We identify areas of opportunity, whether traditional or novel,
-and we partner with companies who are seeking focused strategies for
-their portfolio.`
-
+                act as a one stop shop servicing all areas that are necessary for our clients.
+                We are content distributors, licensors and managers. We create localized
+                versions of original and external content at our post-production facilities
+                and we market and sell the final product as digital media or tangible
+                formats. We identify areas of opportunity, whether traditional or novel,
+                and we partner with companies who are seeking focused strategies for
+                their portfolio.`
         },
         bullets: {
             one: {
                 header: '01.FILM AND TELEVISION',
                 subtitle: 'Media Content & Film Distribution',
                 text: `
-We handle the acquisitions, distribution, and/or representation of
-live action and animation movies and series, as well as documentaries
-and formats for all systems.
-`
+                We handle the acquisitions, distribution, and/or representation of
+                live action and animation movies and series, as well as documentaries
+                and formats for all systems.
+                `
             },
             two: {
                 header: '02.LOCALIZATION BUSINESS',
                 subtitle: 'Dubbing and Post-production',
                 text: `
-We operate our own post-production facilities thus ensuring high
-quality and speed of our dubbing and material distribution. As
-experts in the field, we also work with external partners offering
-the same level of exceptional quality.
-`
+                We operate our own post-production facilities thus ensuring high
+                quality and speed of our dubbing and material distribution. As
+                experts in the field, we also work with external partners offering
+                the same level of exceptional quality.
+                `
             },
             three: {
                 header: '03.LICENSING BUSINESS',
                 subtitle: 'Licensing & Merchandising',
                 text: `
-We work as dedicated brand ambassadors opening an endless
-world of opportunities. Making products come to life and
-connecting these with the target consumers.
-`
+                We work as dedicated brand ambassadors opening an endless
+                world of opportunities. Making products come to life and
+                connecting these with the target consumers.
+                `
             },
             four: {
                 header: '04.BUSINESS DEVELOPMENT',
                 subtitle: '',
                 text: `
-<div class="text-lg">Strategic Planning and Marketing</div>
-We think ahead the game and create tailored-strategies for the
-brands we represent. Combining local know-how with worldwide
-thinking.
-<div class="text-lg">DIGITAL MEDIA AND PR</div>
-We manage Social and Digital Media platforms driving sales and
-revenue through use of new outlets. We build a solid reputation
-that people believe in.
-
-`
+                <div class="text-lg">Strategic Planning and Marketing</div>
+                We think ahead the game and create tailored-strategies for the
+                brands we represent. Combining local know-how with worldwide
+                thinking.
+                <div class="text-lg">DIGITAL MEDIA AND PR</div>
+                We manage Social and Digital Media platforms driving sales and
+                revenue through use of new outlets. We build a solid reputation
+                that people believe in.
+                `
             }
         }
     }
