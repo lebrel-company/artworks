@@ -8,7 +8,7 @@ function Footer() {
                 listOfLinks.map(function createLinks(element, i) {
                         if (listOfLinks.length != (i - 1)) {
                             return (
-                                <span className='font-crimson'>
+                                <span className='font-crimson hover:underline' key={i}>
                                     <span className='xs:mx-5 md:mx-10'>
                                     <Link href={element.href}>
                                     <a>{element.name}</a>
@@ -19,7 +19,7 @@ function Footer() {
                             )
                         } else {
                             return (
-                                <span className='font-crimson text-base'>
+                                <span className='font-crimson text-base' key={i}>
                                     <span className='xs:mx-0 md:mx-10'>
                                     <Link href={element.href}>
                                     <a>{element.name}</a>

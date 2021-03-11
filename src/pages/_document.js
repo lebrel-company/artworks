@@ -22,21 +22,19 @@ class MyDocument extends Document {
                             family=Ballet&
                             display=swap`
                         }
-                        rel="stylesheet" />
-                    <link
-                        rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css"
-                        integrity="sha512-wl80ucxCRpLkfaCnbM88y4AxnutbGk327762eM9E/rRTvY/ZGAHWMZrYUq66VQBYMIYDFpDdJAOGSLyIPHZ2IQ=="
-                        crossOrigin="anonymous"
-                    />
+                        rel="stylesheet"/>
+                    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+                        <link
+                            href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Poppins:wght@300&family=Source+Sans+Pro:wght@300&display=swap"
+                            rel="stylesheet"/>
                 </Head>
                 <body>
                 <Main/>
                 <NextScript/>
                 </body>
             </Html>
-        )
+    )
     }
-}
+    }
 
-export default MyDocument
+    export default MyDocument

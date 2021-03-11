@@ -5,6 +5,7 @@ var info = [
             {
 
                 title: 'Bringing entertainment to the world',
+                button: 'ABOUT US',
                 subtitle: '',
                 text:
                     `Our story begins in 2011 when Artworks Brands was established in California as a
@@ -25,6 +26,7 @@ var info = [
         listOfSections: [
             {
                 title: 'An entertainment company with multiple talents',
+                button: '',
                 subtitle: '',
                 text:
                     `Like any true artist, we believe in the individuality and
@@ -48,6 +50,7 @@ var info = [
         listOfSections: [
             {
                 title: 'Our areas of expertise work seamlessly together',
+                button: 'OUR BUSINESS',
                 subtitle: '',
                 text:
                     `We cover all areas of creative entertainment in-house, which enables us to
@@ -61,13 +64,13 @@ var info = [
             },
             {
                 title: '',
+                button: '',
                 subtitle: '',
                 text:
                     `
-                    <div class="border-yellow-200 relative border-4 rounded-md p-5 m-10">
-                        <div class='text-6xl opacity-40 font-crimson relative left-4 top-1/3 m-2'>1</div>
-                        <div class='font-source text-3xl italic mb-4'>Film & Television</div>
-                        <div class="grid grid-cols-1 gap-5">
+                    <div class="">
+                        <div class='font-poppins text-3xl my-2 text-white opacity-60 hover:opacity-100 hover:text-yellow-300'>01.FILM AND TELEVISION</div>
+                        <div class="hidden grid grid-cols-1 gap-5">
                             <div>
                                 <div class="font-poppins text-lg">
                                 Media Content & Film Distribution
@@ -92,10 +95,9 @@ var info = [
                     
                 </div>
                 
-                <div class="border-pink-500 relative border-4 rounded-md p-5 m-10">
-                    <div class='text-6xl opacity-40 font-crimson relative left-4 top-1/3 m-2'>2</div>
-                    <div class='font-source text-3xl italic mb-4'>Localization Business</div>
-                    <div class="grid grid-cols-1 gap-5">
+                <div class="">
+                    <div class='font-poppins text-3xl my-2 text-white opacity-60 hover:opacity-100 hover:text-yellow-300'>02.LOCALIZATION BUSINESS</div>
+                    <div class="hidden grid grid-cols-1 gap-5">
                         <div>
                             <div class="font-poppins text-lg">
                             Dubbing and Post-production
@@ -110,10 +112,9 @@ var info = [
                     </div>
                 </div>
                 
-                <div class="border-blue-500 relative border-4 rounded-md p-5 m-10">
-                    <div class='text-6xl opacity-40 font-crimson relative left-4 top-1/3 m-2'>3</div>
-                    <div class='font-source text-3xl italic mb-4'>Licensing Business</div>
-                    <div class="grid grid-cols-1 gap-5">
+                <div class="">
+                    <div class='font-poppins text-3xl my-2 text-white opacity-60 hover:opacity-100 hover:text-yellow-300'>03.LICESING BUSINESS</div>
+                    <div class="hidden grid grid-cols-1 gap-5">
                         <div>
                             <div class="font-poppins text-lg">
                             Licensing & Merchandising
@@ -127,10 +128,9 @@ var info = [
                     </div>
                 </div>
                 
-                <div class="border-purple-500 relative border-4 rounded-md p-5 m-10">
-                    <div class='text-6xl opacity-40 font-crimson relative left-4 top-1/3 m-2'>4</div>
-                    <div class='font-source text-3xl italic mb-4'>Business Development</div>
-                    <div class="grid grid-cols-1 gap-5">
+                <div class="">
+                    <div class='font-poppins text-3xl my-2 text-white opacity-60 hover:opacity-100 hover:text-yellow-300'>04.BUSINESS DEVELOPMENT</div>
+                    <div class="hidden grid grid-cols-1 gap-5">
                         <div>
                             <div class="font-poppins text-lg">
                             Strategic Planning and Marketing
@@ -142,8 +142,8 @@ var info = [
                             </div>
                         </div>
                         <div>
-                            <div class="font-poppins text-lg">
-                            Digital Media & PR 
+                            <div class="font-poppins text-3xl">
+                            DIGITAL MEDIA AND PR
                             </div>
                             <div class="font-poppins text-sm">
                             We manage Social and Digital Media platforms driving sales and

@@ -17,15 +17,50 @@ body {
     color: white;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
+.container-scrollbar p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+/* Tamaño del scroll */
+.container-scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Estilos barra (thumb) de scroll */
+.container-scrollbar::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 4px;
+}
+
+.container-scrollbar::-webkit-scrollbar-thumb:active {
+    background: #ffffff99;
+}
+
+.container-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+.container-scrollbar::-webkit-scrollbar-track {
+    background: #ffffff99;
+    border-radius: 4px;
+}
+
+.container-scrollbar::-webkit-scrollbar-track:hover,
+.container-scrollbar::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
 }
 
 .text-yellow-stroke {
+    text-shadow: 0px 0px 10px #f5e94226;
     color: rgba(255, 255, 255, 0);
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(240, 255, 100);
-    font-family: 'source';
+    @apply
+        font-source
+        font-bold
+        leading-none
 }
 
 .menu-btn {
@@ -48,11 +83,9 @@ body {
 .menu-btn__burger::after {
     width: 50px;
     height: 6px;
-
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 2px 5px var(--box-shadow-color);
-
     transition: all 0.5s ease-in-out;
 }
 
