@@ -5,22 +5,32 @@ function Footer() {
     return (
         <div className='text-center m-5'>
             {
+            }
+            {
                 listOfLinks.map(function createLinks(element, i) {
-                        if (listOfLinks.length != (i - 1)) {
+                        if (listOfLinks.length - 1 !== (i)) {
                             return (
-                                <span className='font-crimson hover:underline' key={i}>
-                                    <span className='xs:mx-5 md:mx-10'>
+                                <span className='
+                                mx-2
+                                font-crimson hover:underline'
+                                      key={i}>
+                                    <span className=''>
                                     <Link href={element.href}>
-                                    <a>{element.name}</a>
+                                        <a>{element.name} </a>
                                     </Link>
                                     </span>
-                                    <span className='text-2xl font-thin'>|</span>
+                                <span className='
+                                mx-4 transform scale-150
+                                '>|</span>
                                 </span>
                             )
                         } else {
                             return (
-                                <span className='font-crimson text-base' key={i}>
-                                    <span className='xs:mx-0 md:mx-10'>
+                                <span className='
+                                mx-4
+                                font-crimson hover:underline
+                                ' key={i}>
+                                    <span className=''>
                                     <Link href={element.href}>
                                     <a>{element.name}</a>
                                     </Link>

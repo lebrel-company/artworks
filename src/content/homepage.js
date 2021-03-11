@@ -5,7 +5,7 @@ var info = [
             {
 
                 title: 'Bringing entertainment to the world',
-                button: 'ABOUT US',
+                button: 'NICE TO MEET YOU',
                 subtitle: '',
                 text:
                     `Our story begins in 2011 when Artworks Brands was established in California as a
@@ -21,30 +21,6 @@ var info = [
         ],
     },
 
-    {
-        heading: `Who we are today`,
-        listOfSections: [
-            {
-                title: 'An entertainment company with multiple talents',
-                button: '',
-                subtitle: '',
-                text:
-                    `Like any true artist, we believe in the individuality and
-                    creative power behind each project we undertake. We are
-                    proud to provide unified creative, business and successful
-                    communications solutions with the highest standards. With
-                    our Film and Television, Localization, Licensing and
-                    Merchandising and Business Development units, we have a
-                    comprehensive business approach paired with effective and
-                    creative ideas developed by a passionate team. Bolstered
-                    by our status as a single company with multiple talents,
-                    Artworks Entertainment is proud to have unbeatable and
-                    established business relationships with a number of global
-                    leading companies in the entertainment, production, film,
-                    television, digital content and licensing industries.`
-            },
-        ],
-    },
     {
         heading: `<div>What<br>we do</div>`,
         listOfSections: [
@@ -69,21 +45,11 @@ var info = [
                 text:
                     `
                     <div class="">
-                        <div class='font-poppins text-3xl my-2 text-white opacity-60 hover:opacity-100 hover:text-yellow-300'>01.FILM AND TELEVISION</div>
-                        <div class="hidden grid grid-cols-1 gap-5">
+                        <div class='trigger-one font-poppins text-3xl my-2 text-white opacity-60 hover:opacity-100 hover:text-yellow-300'>01.FILM AND TELEVISION</div>
+                        <div class="display-one hidden grid grid-cols-1 gap-5">
                             <div>
                                 <div class="font-poppins text-lg">
                                 Media Content & Film Distribution
-                                </div>
-                                <div class="font-poppins text-sm">
-                                We handle the acquisitions, distribution, and/or representation of
-                                live action and animation movies and series, as well as documentaries 
-                                and formats for all systems.
-                                </div>
-                            </div>
-                            <div>
-                                <div class="font-poppins text-lg">
-                                Planning & Co-production
                                 </div>
                                 <div class="font-poppins text-sm">
                                 We handle the acquisitions, distribution, and/or representation of
