@@ -21,12 +21,10 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Tamaño del scroll */
 .container-scrollbar::-webkit-scrollbar {
     width: 5px;
 }
 
-/* Estilos barra (thumb) de scroll */
 .container-scrollbar::-webkit-scrollbar-thumb {
     background: white;
     border-radius: 4px;
@@ -41,7 +39,6 @@ body {
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos track de scroll */
 .container-scrollbar::-webkit-scrollbar-track {
     background: #ffffff99;
     border-radius: 4px;

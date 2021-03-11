@@ -37,27 +37,12 @@ module.exports = {
             'xl': '1280px',
             '2xl': '1536px',
         },
-        letterSpacing: {
-            tightest: '-.075em',
-            tighter: '-.05em',
-            tight: '-.025em',
-            normal: '0',
-            wide: '.025em',
-            wider: '.05em',
-            widest: '.7em',
-            superwide: '.8em'
-        }
     },
     darkMode: false,
-    variants:{
-        extend: {
-            letterSpacing: ['hover', 'focus'],
-        }
-    }
-    // // theme: {
-    // //     colors: {},
-    // //     extend: {},
-    // // },
+    // variants:{
+    //     extend: {
+    //     }
+    // }
     // variants: {
     //     extend: {},
     // },
