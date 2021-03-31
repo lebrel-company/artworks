@@ -2,7 +2,7 @@
 // libraries:
 import Link from 'next/link'
 import Head from 'next/head'
-import {useRef} from 'react'
+import {useRef, useEffect} from 'react'
 // -- -- -- -- -- -- -- -- -- -- -- -- -- --
 // Contexts:
 // -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -17,31 +17,34 @@ import Section from '../components/section'
 //==============================================================================
 
 
-function Home() {
+export default function Home() {
+
     return (
         <div className='w-screen h-screen'>
             <div className='h-full md:mx-10'>
-                <div className='h-full flex flex-col'>
-                    <div className='w-full z-10 p-8 relative z-20'>
+                <div className='flex flex-col h-full'>
+                    <div className='md:p-6 relative z-20'>
                         <Header/>
                     </div>
-                    <div
-                        className='h-full xl:w-1/2 relative z-20 mx-4 lg:mx-20 container-scrollbar overflow-y-scroll'
-                        style={{direction: "rtl"}}>
+                    <div className='h-3/4'>
                         <Section/>
                     </div>
-                    <div className='lg:mx-20 xl:w-1/2 py-2 relative z-20'>
+                    <div className='lg:mx-20 xl:w-1/2 py-4 relative z-20'>
                         <Footer/>
                     </div>
                 </div>
                 <img
                     src='/medusa/images/sleeping_blue.png'
-                    className='fixed object-cover md:object-contain top-0 h-screen md:right-8 z-0'
+                    className='
+                    fixed z-10 object-cover
+                    md:object-contain top-0 h-screen md:right-8 z-0'
                 />
             </div>
+            <video autoPlay muted loop className="bg-video">
+                <source src="/videos/abstract.mp4" type="video/mp4"/>
+            </video>
         </div>
     )
 }
 
 
-export default Home;

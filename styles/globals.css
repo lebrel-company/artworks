@@ -4,17 +4,31 @@
 
 
 html {
-    height: 100vh;
     background: url('/static/purple.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: blueviolet;
+    @apply
+        h-screen
 }
 
 body {
-    height: 100vh;
     color: white;
+    @apply
+        h-full
+}
+
+.bg-video {
+    object-fit: cover;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    @apply
+        h-full
+        w-full
 }
 
 .text-yellow-stroke {
@@ -23,40 +37,40 @@ body {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(240, 255, 100);
     @apply
-        text-5xl
-        md:text-8xl
-        lg:text-xxl
-        font-source
-        font-bold
-        leading-none
-}
-.title{
-    @apply
-        italic
-        font-crimson
-        text-2xl
-        md:text-4xl
+    text-5xl
+    md:text-9xl
+    font-source
+    font-bold
+    leading-none
 }
 
-.bullet{
+.title {
     @apply
-        tracking-wide
-        opacity-60
-        my-4
-        text-base
-        md:text-2xl
-        font-poppins
-        hover:text-yellow-200
-        hover:opacity-100
+    italic
+    font-crimson
+    text-2xl
+    md:text-4xl
 }
 
-.sub-button{
-    color: rgb(0,150,255);
+.bullet {
     @apply
-        font-poppins
-        tracking-widest
-        text-2xl
-        hover:text-blue-300
+    tracking-wide
+    opacity-60
+    my-4
+    text-base
+    md:text-2xl
+    font-poppins
+    hover:text-yellow-200
+    hover:opacity-100
+}
+
+.sub-button {
+    color: rgb(0, 150, 255);
+    @apply
+    font-poppins
+    tracking-widest
+    text-2xl
+    hover:text-blue-300
 }
 
 .container-scrollbar p:not(:last-child) {
@@ -73,22 +87,22 @@ body {
 }
 
 .container-scrollbar::-webkit-scrollbar-thumb:active {
-    background: #ffffff99;
+    background: #ffffff;
 }
 
 .container-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #ffffff;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px 1px;
 }
 
 .container-scrollbar::-webkit-scrollbar-track {
-    background: #ffffff99;
+    background: #ffffff;
     border-radius: 4px;
 }
 
 .container-scrollbar::-webkit-scrollbar-track:hover,
 .container-scrollbar::-webkit-scrollbar-track:active {
-    background: #d4d4d4;
+    background: #ffffff;
 }
 
 
@@ -132,7 +146,6 @@ body {
     transform: translateY(16px);
 }
 
-/* ANIMATION */
 .menu-btn.open .menu-btn__burger {
     transform: translateX(-50px);
     background-color: transparent;
@@ -145,4 +158,8 @@ body {
 
 .menu-btn.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.v-text {
+    writing-mode: vertical-rl;
 }

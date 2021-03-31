@@ -1,7 +1,7 @@
 'use strict';
 // libraries:
 import Link from "next/link"
-import {useRef, useState} from 'react'
+import {useRef, useEffect, useState} from 'react'
 // -- -- -- -- -- -- -- -- -- -- -- -- -- --
 // Contexts:
 // -- -- -- -- -- -- -- -- -- -- -- -- -- --
@@ -27,6 +27,64 @@ export default function Section(props) {
     let [fourHovering, setFourHovering] = useState(false)
     let fourContent = useRef()
 
+    //-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+    var scrollArea = useRef()
+    var ourHistory = useRef()
+    var whoWeAre = useRef()
+    var whatWeDo = useRef()
+    var ourHistoryBullet = useRef()
+    var whoWeAreBullet = useRef()
+    var whatWeDoBullet = useRef()
+
+    useEffect(function scroll() {
+        var _scrollArea = scrollArea.current;
+        var _ourHistory = ourHistory.current;
+        var _whoWeAre = whoWeAre.current;
+        var _whatWeDo = whatWeDo.current;
+        var _ourHistoryBullet = ourHistoryBullet.current;
+        var _whoWeAreBullet = whoWeAreBullet.current;
+        var _whatWeDoBullet = whatWeDoBullet.current;
+
+        function handleScroll() {
+            let scrollAreaRect = _scrollArea.getBoundingClientRect()
+            let scrollAreaCenter = (
+                (scrollAreaRect.height / 2) + scrollAreaRect.top
+            )
+
+            function distances(title, bullet) {
+                let titleRect = title.getBoundingClientRect()
+                let titleCenter = (titleRect.height / 2) + titleRect.top
+                let titleDeltaFromCenter = scrollAreaCenter - titleCenter
+                let scrollAreaDistanceToBounds = (
+                    Math.abs(scrollAreaRect.height / 2)
+                )
+
+                let distanceFromCenter = (
+                    Math.abs(titleDeltaFromCenter) / scrollAreaDistanceToBounds
+                )
+                let alpha = 1
+                if (distanceFromCenter > 1){
+                    distanceFromCenter = 1
+                }
+
+                alpha = alpha - distanceFromCenter
+                console.log(alpha)
+                bullet.style.color = `rgb(255,255,255,${alpha})`
+            }
+
+            distances(_ourHistory, _ourHistoryBullet)
+            distances(_whoWeAre, _whoWeAreBullet)
+            distances(_whatWeDo, _whatWeDoBullet)
+        }
+
+        _scrollArea.addEventListener('scroll', handleScroll)
+        return function cleanup() {
+            _scrollArea.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
+
+    //-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+
     function handleOnHover(setter, element) {
         setter(true)
     }
@@ -36,151 +94,175 @@ export default function Section(props) {
     }
 
     return (
-        <div className='md:my-10 mx-10' style={{direction: 'ltr'}}>
-            <div className=''>
-                <div className='text-yellow-stroke'
-                     dangerouslySetInnerHTML={{__html: info.ourHistory.heading}}
-                />
-                <div className='title'
-                     dangerouslySetInnerHTML={
-                         {__html: info.ourHistory.section01.title}
-                     }
-                />
-                <div className='sub-button'
-                     dangerouslySetInnerHTML={
-                         {__html: info.ourHistory.section01.button}
-                     }
-                />
-                <div className='font-poppins text-justify'
-                     dangerouslySetInnerHTML={
-                         {__html: info.ourHistory.section01.text}
-                     }
-                />
+        <div className='flex flex-row h-full pl-2 md:pl-12 py-4'>
+            <div className='
+                        relative z-20 h-full py-10
+                        flex flex-col justify-between'>
+                <div ref={ourHistoryBullet} className='v-text'>Our History</div>
+                <div ref={whoWeAreBullet} className='v-text'>Who we are today
+                </div>
+                <div ref={whatWeDoBullet} className='v-text'>What we do</div>
             </div>
-            <div className='my-40'>
-                <div className='text-yellow-stroke'
-                     dangerouslySetInnerHTML={{__html: info.whoWeAre.heading}}
-                />
-                <div className='title'
-                     dangerouslySetInnerHTML={
-                         {__html: info.whoWeAre.section01.title}
-                     }
-                />
-                <div className='sub-button'
-                     dangerouslySetInnerHTML={
-                         {__html: info.whoWeAre.section01.button}
-                     }
-                />
-                <div className='font-poppins text-justify'
-                     dangerouslySetInnerHTML={
-                         {__html: info.whoWeAre.section01.text}
-                     }
-                />
-            </div>
-            <div className='my-40'>
-                <div className='text-yellow-stroke'
-                     dangerouslySetInnerHTML={{__html: info.whatWeDo.heading}}
-                />
-                <div className='title'
-                     dangerouslySetInnerHTML={
-                         {__html: info.whatWeDo.section01.title}
-                     }
-                />
-                <div className='sub-button'
-                     dangerouslySetInnerHTML={
-                         {__html: info.whatWeDo.section01.button}
-                     }
-                />
-                <div className='font-poppins text-justify'
-                     dangerouslySetInnerHTML={
-                         {__html: info.whatWeDo.section01.text}
-                     }
-                />
-                <div className='flex'>
-                    <div className='grid grid-flow-col my-10 flex-auto'>
-                        <div ref={oneBullet}
-                             onMouseOver={() => handleOnHover(setOneHovering, oneHovering)}
-                             onMouseLeave={() => handleLeave(setOneHovering, oneHovering)}
-                             className='bullet row-start-1 col-start-1'>
-                            {info.whatWeDo.bullets.one.header}
-                        </div>
-                        <div ref={twoBullet}
-                             onMouseOver={() => handleOnHover(setTwoHovering, twoHovering)}
-                             onMouseLeave={() => handleLeave(setTwoHovering, twoHovering)}
-                             className='bullet row-start-2 col-start-1'>
-                            {info.whatWeDo.bullets.two.header}
-                        </div>
-                        <div ref={threeBullet}
-                             onMouseOver={() => handleOnHover(setThreeHovering, threeHovering)}
-                             onMouseLeave={() => handleLeave(setThreeHovering, threeHovering)}
-                             className='bullet row-span-3 col-start-1'>
-                            {info.whatWeDo.bullets.three.header}
-                        </div>
-                        <div ref={fourBullet}
-                             onMouseOver={() => handleOnHover(setFourHovering, fourHovering)}
-                             onMouseLeave={() => handleLeave(setFourHovering, fourHovering)}
-                             className='bullet row-start-4 col-start-1'>
-                            {info.whatWeDo.bullets.four.header}
-                        </div>
+            <div
+                ref={scrollArea}
+                className='
+            xl:w-1/2 relative z-20 mx-4 lg:mx-4 h-full
+            container-scrollbar overflow-y-scroll'
+                style={{direction: 'rtl'}}
+            >
+                <div className='md:my-10 mx-10' style={{direction: 'ltr'}}>
+                    <div className='mt-96'>
+                        <div
+                            ref={ourHistory}
+                            className='text-yellow-stroke'
+                            dangerouslySetInnerHTML={{__html: info.ourHistory.heading}}
+                        />
+                        <div className='title'
+                             dangerouslySetInnerHTML={
+                                 {__html: info.ourHistory.section01.title}
+                             }
+                        />
+                        <div className='sub-button'
+                             dangerouslySetInnerHTML={
+                                 {__html: info.ourHistory.section01.button}
+                             }
+                        />
+                        <div className='font-poppins text-justify'
+                             dangerouslySetInnerHTML={
+                                 {__html: info.ourHistory.section01.text}
+                             }
+                        />
                     </div>
-                    <div className='container my-auto w-1/2 p-2'>
-                        {
-                            oneHovering && (
-                                <div
-                                    ref={oneContent}
-                                    className='
+                    <div className='my-40'>
+                        <div
+                            ref={whoWeAre}
+                            className='text-yellow-stroke'
+                            dangerouslySetInnerHTML={{__html: info.whoWeAre.heading}}
+                        />
+                        <div className='title'
+                             dangerouslySetInnerHTML={
+                                 {__html: info.whoWeAre.section01.title}
+                             }
+                        />
+                        <div className='sub-button'
+                             dangerouslySetInnerHTML={
+                                 {__html: info.whoWeAre.section01.button}
+                             }
+                        />
+                        <div className='font-poppins text-justify'
+                             dangerouslySetInnerHTML={
+                                 {__html: info.whoWeAre.section01.text}
+                             }
+                        />
+                    </div>
+                    <div className='my-40'>
+                        <div
+                            ref={whatWeDo}
+                            className='text-yellow-stroke'
+                            dangerouslySetInnerHTML={{__html: info.whatWeDo.heading}}
+                        />
+                        <div className='title'
+                             dangerouslySetInnerHTML={
+                                 {__html: info.whatWeDo.section01.title}
+                             }
+                        />
+                        <div className='sub-button'
+                             dangerouslySetInnerHTML={
+                                 {__html: info.whatWeDo.section01.button}
+                             }
+                        />
+                        <div className='font-poppins text-justify'
+                             dangerouslySetInnerHTML={
+                                 {__html: info.whatWeDo.section01.text}
+                             }
+                        />
+                        <div className='flex'>
+                            <div className='grid grid-flow-col my-10 flex-auto'>
+                                <div ref={oneBullet}
+                                     onMouseOver={() => handleOnHover(setOneHovering, oneHovering)}
+                                     onMouseLeave={() => handleLeave(setOneHovering, oneHovering)}
+                                     className='bullet row-start-1 col-start-1'>
+                                    {info.whatWeDo.bullets.one.header}
+                                </div>
+                                <div ref={twoBullet}
+                                     onMouseOver={() => handleOnHover(setTwoHovering, twoHovering)}
+                                     onMouseLeave={() => handleLeave(setTwoHovering, twoHovering)}
+                                     className='bullet row-start-2 col-start-1'>
+                                    {info.whatWeDo.bullets.two.header}
+                                </div>
+                                <div ref={threeBullet}
+                                     onMouseOver={() => handleOnHover(setThreeHovering, threeHovering)}
+                                     onMouseLeave={() => handleLeave(setThreeHovering, threeHovering)}
+                                     className='bullet row-span-3 col-start-1'>
+                                    {info.whatWeDo.bullets.three.header}
+                                </div>
+                                <div ref={fourBullet}
+                                     onMouseOver={() => handleOnHover(setFourHovering, fourHovering)}
+                                     onMouseLeave={() => handleLeave(setFourHovering, fourHovering)}
+                                     className='bullet row-start-4 col-start-1'>
+                                    {info.whatWeDo.bullets.four.header}
+                                </div>
+                            </div>
+                            <div className='container my-auto w-1/2 p-2'>
+                                {
+                                    oneHovering && (
+                                        <div
+                                            ref={oneContent}
+                                            className='
                                     font-poppins
                                     text-sm text-justify'>
-                                    <div
-                                        className=''>{info.whatWeDo.bullets.one.title}</div>
-                                    <div
-                                        className=''>{info.whatWeDo.bullets.one.text}</div>
-                                </div>
-                            )
-                        }
-                        {
-                            twoHovering && (
-                                <div
-                                    ref={twoContent}
-                                    className='
+                                            <div
+                                                className=''>{info.whatWeDo.bullets.one.title}</div>
+                                            <div
+                                                className=''>{info.whatWeDo.bullets.one.text}</div>
+                                        </div>
+                                    )
+                                }
+                                {
+                                    twoHovering && (
+                                        <div
+                                            ref={twoContent}
+                                            className='
                                     font-poppins
                                     text-sm text-justify'>
-                                    <div
-                                        className=''>{info.whatWeDo.bullets.two.title}</div>
-                                    <div
-                                        className=''>{info.whatWeDo.bullets.two.text}</div>
-                                </div>
-                            )
-                        }
-                        {
-                            threeHovering && (
-                                <div
-                                    ref={threeContent}
-                                    className='
+                                            <div
+                                                className=''>{info.whatWeDo.bullets.two.title}</div>
+                                            <div
+                                                className=''>{info.whatWeDo.bullets.two.text}</div>
+                                        </div>
+                                    )
+                                }
+                                {
+                                    threeHovering && (
+                                        <div
+                                            ref={threeContent}
+                                            className='
                                     font-poppins
                                     text-sm text-justify'>
-                                    <div
-                                        className=''>{info.whatWeDo.bullets.three.title}</div>
-                                    <div
-                                        className=''>{info.whatWeDo.bullets.three.text}</div>
-                                </div>
-                            )
-                        }
-                        {
-                            fourHovering && (
-                                <div
-                                    ref={fourContent}
-                                    className='
+                                            <div
+                                                className=''>{info.whatWeDo.bullets.three.title}</div>
+                                            <div
+                                                className=''>{info.whatWeDo.bullets.three.text}</div>
+                                        </div>
+                                    )
+                                }
+                                {
+                                    fourHovering && (
+                                        <div
+                                            ref={fourContent}
+                                            className='
                                     font-poppins
                                     text-sm text-justify'>
-                                    <div
-                                        className=''>{info.whatWeDo.bullets.four.title}</div>
-                                    <div
-                                        className=''
-                                        dangerouslySetInnerHTML={{__html: info.whatWeDo.bullets.four.text}}/>
-                                </div>
-                            )
-                        }
+                                            <div
+                                                className=''>{info.whatWeDo.bullets.four.title}</div>
+                                            <div
+                                                className=''
+                                                dangerouslySetInnerHTML={{__html: info.whatWeDo.bullets.four.text}}/>
+                                        </div>
+                                    )
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

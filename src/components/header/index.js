@@ -9,7 +9,12 @@ function Header(props) {
             <div className='
                 md:col-span-1 lg:col-span-1 xl:col-span-1 header-logo
                 '>
-                <img src='/logos/artworks.png' alt='Artworks logo' layout='responsive'/>
+                <img
+                    width={150}
+                    height={150}
+                    src='/logos/artworks.png'
+                    alt='Artworks logo'
+                    layout='responsive'/>
             </div>
             <div className='font-crimson text-xl'>
                 <Link href='/showreel'>
