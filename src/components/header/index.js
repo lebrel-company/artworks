@@ -10,13 +10,13 @@ function Header(props) {
                 md:col-span-1 lg:col-span-1 xl:col-span-1 header-logo
                 '>
                 <img
-                    width={150}
-                    height={150}
+                    width={120}
+                    height={120}
                     src='/logos/artworks.png'
                     alt='Artworks logo'
                     layout='responsive'/>
             </div>
-            <div className='font-crimson text-xl'>
+            <div className='font-crimson text-lg'>
                 <Link href='/showreel'>
                     <a className='
                     hover:underline
