@@ -1,24 +1,32 @@
 {
   "name": "artworks",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Jair Anguiano <jairanpo@gmail.com>",
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start"
+    "test": "next build",
+    "start": "next start",
+    "prepare": "husky install",
+    "lint": "next lint",
+    "validate": "run-p test lint"
   },
   "dependencies": {
-    "jsdom": "^16.4.0",
-    "next": "^10.0.7",
-    "postcss-preset-env": "^6.7.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.4",
-    "postcss": "^8.2.6",
-    "tailwindcss": "^2.0.3"
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-next": "^0.0.0",
+    "husky": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
   }
 }
