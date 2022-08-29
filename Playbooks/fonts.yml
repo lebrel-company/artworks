@@ -1,0 +1,21 @@
+---
+- name: Process the copy of all the required fonts
+  hosts: all
+  tasks:
+    - name: Create .Font directory
+      file: 
+        path: "{{ lookup('env', 'HOME') }}/.fonts"
+        state: directory
+        mode: '0755' 
+    - name: Setting facts for fonts 
+      set_fact:
+        fonts:
+          - 'MesloLGS NF Bold Italic.tff'
+          - 'MesloLGS NF Bold Bold.tff'
+          - 'MesloLGS NF Bold Italic.tff'
+          - 'MesloLGS NF Bold Regular.tff'
+    - name: "Add Fonts"
+      include_tasks: tasks/copy_fonts.yml
+      loop: "{{ fonts }}"
+      loop_control: 
+        loop_var: font

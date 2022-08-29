@@ -1,0 +1,17 @@
+---
+- name: Copy files from .config
+  hosts: all
+  vars:
+    app: "app"
+  tasks:
+    - name: Create a symlink from files inside the .config directory
+      file: 
+        src: "{{ lookup('env', 'HOME') }}/{{ app }}/Playbooks/.config/{{ item }}"
+        dest: "{{ lookup('env', 'HOME') }}/{{ item }}"
+        state: link
+        force: yes
+      loop:
+        - .tmux.conf
+        - .bashrc
+        - .vimrc
+        - .zshrc

@@ -1,0 +1,11 @@
+---
+- name: Special command in linux for Node.js Misc operations
+  hosts: all
+  vars:
+    app: "app"
+  tasks:
+    - name: Increase de amount of max_user_watches to avoid ENOSPC limit error
+      shell: |
+        echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+        sudo sysctl -p
+

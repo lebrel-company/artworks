@@ -1,0 +1,29 @@
+---
+- name: Exists
+  shell: command -v aws
+  register: aws_exists
+  ignore_errors: true
+- name: Download
+  when: aws_exists.rc != 0
+  get_url:
+    url: "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
+    dest: "{{ lookup('env', 'HOME') }}/Downloads/awscliv2.zip"
+- name: Unzip
+  when: aws_exists.rc != 0
+  unarchive:
+    src: "{{ lookup('env', 'HOME') }}/Downloads/awscliv2.zip"
+    dest: "."
+- name: Install
+  when: aws_exists.rc != 0
+  raw: "sudo ./aws/install"
+- name: Configure
+  shell: aws configure set {{ item.key }} {{ item.value }} --profile {{ aws_profile }}
+  with_dict:
+    aws_access_key_id: "{{ aws_access_key }}"
+    aws_secret_access_key: "{{ aws_secret_key }}"
+    region: "{{ aws_region }}"
+    format: "{{ aws_format }}"
+  become_user: "{{ aws_system_user }}"
+  changed_when: false
+
+      

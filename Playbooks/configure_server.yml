@@ -1,0 +1,170 @@
+---
+- name: Create folders and files
+  hosts: all
+  become: true
+  tasks:
+    - name: Home extra directories
+      file: 
+        path: "{{ lookup('env', 'HOME') }}/{{ item }}"
+        state: directory 
+        mode: "0755"
+      loop:
+        - Downloads
+
+- name: Link Config Files
+  hosts: all
+  become: true
+  vars: 
+    root_dir: "{{ lookup('env', 'HOME') }}/app/Playbooks/.config"
+    dest_dir: "{{ lookup('env', 'HOME') }}"
+    list_of_files: 
+      - .tmux.conf
+      - .bashrc
+      - .vimrc
+      - .zshrc
+      - .p10k.zsh
+  tasks: 
+    - include_tasks: tasks/link_files.yml
+
+- name: Link Script Files
+  hosts: all
+  become: true
+  vars: 
+    root_dir: "{{ lookup('env', 'HOME') }}/app/Playbooks/scripts"
+    dest_dir: "{{ lookup('env', 'HOME') }}"
+    list_of_files: 
+      - init.sh
+  tasks:
+    - include_tasks: tasks/link_files.yml
+
+- name: Install Requirements
+  hosts: all
+  become: true
+  tasks:
+    - name: Update all packages to their latest version
+      apt:
+        name: "*"
+        state: latest
+      ignore_errors: yes
+    - name: Update cache
+      package:
+        update_cache: yes
+    - name: Install Python latest
+      package:
+        name: python3.9
+        state: latest
+    - name: Install FZF
+      package:
+        name: fzf
+        state: present
+    - name: Install bat
+      package:
+        name: bat
+        state: present
+    - name: Install tree
+      package:
+        name: tree
+        state: present
+    - name: Install tree
+      package:
+        name: unzip
+        state: present
+
+- name: TMUX
+  hosts: all
+  become: true
+  tasks:
+    - include_tasks: tasks/tmux.yml
+
+
+- name: CONFIGURE NODE
+  hosts: all
+  become: true
+  gather_facts: no
+  debugger: on_failed
+  vars:
+    VERSION: "node_16.x"
+    DISTRO: "focal"
+    npm_global_modules: 
+      - "nodemon"
+      - "@sentry/cli"
+  tasks:
+    - include_tasks: tasks/node.yml
+
+
+- name: AWS CLI
+  hosts: all
+  become: true
+  vars_files:
+    - vars/main.yml
+  tasks:
+    - include_tasks: tasks/install_aws.yml
+
+- name: Install Ohh My Zsh
+  hosts: all
+  become: true
+  tasks:
+    - name: Install ZShell
+      apt:
+        name: zsh
+        state: present
+    - name: Setup zsh for user
+      user:
+        name: "vagrant"
+        shell: /bin/zsh
+    - name: Download Oh My Zsh!
+      get_url:
+        url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+        dest: /home/vagrant
+    - name: Check for $ZSH
+      stat:
+        path: /root/.oh-my-zsh
+      register: check_for_zsh
+    - name: Delete previous installation
+      file:
+        path: /root/.oh-my-zsh
+        state: absent
+      when: check_for_zsh.stat.exists
+    - name: Execution permissions
+      file: 
+        path: /home/vagrant/install.sh
+        mode: 'u=rwx,o=rwx,g=rwx'
+    - name: Install Oh My Zsh!
+      shell: /home/vagrant/install.sh
+
+- name: Install powerlevel10k
+  hosts: all
+  tasks:
+    - name: Git checkout
+      git:
+        repo: 'https://github.com/romkatv/powerlevel10k.git'
+        dest: "{{ lookup('env', 'HOME') }}/.oh-my-zsh/custom/themes/powerlevel10k"
+
+
+- name: Install Terraform
+  hosts: all
+  become: true
+  gather_facts: no
+  tasks:
+    - name: Check for Terraform
+      raw: test -e /usr/bin/terraform
+      failed_when: false
+      changed_when: false
+      register: terraform_check
+    - name: Install Terraform requirements
+      raw: sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+      register: terraform_requirements
+      when: terraform_check.rc != 0
+    - name: Add the GPG key
+      raw: curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+      register: add_gpg_key
+      when: terraform_check.rc != 0
+    - name: Add the HashiCorp Linux Repository
+      raw: sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+      register: add_hashicorp_repo
+      when: terraform_check.rc != 0
+    - name: Update tto add the repository, and install the Terraform CLI
+      raw: sudo apt-get update && sudo apt-get install terraform
+      when: terraform_check.rc != 0
+
+

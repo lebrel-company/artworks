@@ -1,0 +1,8 @@
+---
+- name: Create a symlink from files inside the .config directory
+  file: 
+    src: "{{ root_dir }}/{{ item }}"
+    dest: "{{ dest_dir }}/{{ item }}"
+    state: link
+    force: yes
+  loop: "{{ list_of_files }}"

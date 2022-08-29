@@ -55,12 +55,12 @@ body {
 .bullet {
     @apply
     tracking-wide
-    opacity-60
+    opacity-80
     my-4
-    text-base
     md:text-2xl
     font-poppins
-    hover:text-yellow-200
+    text-orange-600
+    hover:cursor-pointer
     hover:opacity-100
 }
 
