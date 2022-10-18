@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('./hamburguer.css');
+@import url('./fonts.css');
 
 html {
     background: url('/static/purple.png') no-repeat center center fixed;

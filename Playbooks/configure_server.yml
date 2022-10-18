@@ -26,6 +26,11 @@
   tasks: 
     - include_tasks: tasks/link_files.yml
 
+- name: NEOVIM
+  hosts: all
+  tasks:
+    - include_tasks: tasks/nvim.yml
+
 - name: Link Script Files
   hosts: all
   become: true
@@ -56,10 +61,6 @@
     - name: Install FZF
       package:
         name: fzf
-        state: present
-    - name: Install bat
-      package:
-        name: bat
         state: present
     - name: Install tree
       package:

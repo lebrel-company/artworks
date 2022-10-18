@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Gza";
+  src: url('../fonts/Gza-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gza";
+  src: url('../fonts/Gza-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Gza";
+  src: url('../fonts/Gza-RegularItalic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}

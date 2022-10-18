@@ -1,0 +1,32 @@
+---
+- name: Install Packages
+  become: true
+  package:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - fzf
+    - ripgrep
+    - zsh-autosuggestions
+- name: "Install Neovim 0.7"
+  become: true
+  apt: 
+    deb: "{{ lookup('env', 'HOME') }}/app/Playbooks/files/nvim-linux64.deb"
+- name: Required directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - "{{ lookup('env', 'HOME') }}/.local/share/nvim/site/autoload"
+    - "{{ lookup('env', 'HOME') }}/.config"
+- name: Download VimPlug
+  get_url:
+    url: "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+    dest: "{{ lookup('env', 'HOME') }}/.local/share/nvim/site/autoload/plug.vim"
+- name: Link config
+  file:
+    src: "{{ lookup('env', 'HOME') }}/app/Playbooks/.config/nvim"
+    dest: "{{ lookup('env', 'HOME') }}/.config/nvim"
+    state: link
+    force: yes

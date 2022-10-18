@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|j
     end
 
     config.vm.box = "ubuntu/focal64"
-    config.vm.network "forwarded_port", guest: 3000, host: 3000
+    config.vm.network "forwarded_port", guest: 3000, host: 3001
 
     config.vm.provider "virtualbox" do |vb|
         vb.gui = false
