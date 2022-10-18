@@ -6,7 +6,6 @@ import { colors } from '../../shared/theme'
 
 const BulletLayout = styled.div`
   .title{
-    background-color: ${colors.dark};
     padding: .1rem .4rem;
     font-family: 'Poppins', sans-serif;
     font-size: 1.7rem;
