@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url('./hamburguer.css');
 @import url('./fonts.css');
+@import url('./scrollIcon.css');
 
 html {
     background: url('/static/purple.png') no-repeat center center fixed;

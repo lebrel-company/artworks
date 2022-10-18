@@ -92,9 +92,24 @@ const SectionsContainer = styled.div`
   position: relative;
   z-index: 20;  
   height: 80vh;
-  overflow-y: scroll;
   scroll-behavior: smooth;
 `
+
+const ScrollDownIconContainer = styled.div`
+  position: absolute;
+  right: 0;
+  top: 50%;
+`
+const ScrollDownIcon = ()=>{
+  return <ScrollDownIconContainer>  
+    <div className="scroll-downs">
+      <div className="mousey">
+        <div className="scroller"></div>
+      </div>
+    </div>
+  </ScrollDownIconContainer>
+}
+
 
 export default function Home() {
   const [showMenu, setShowMenu] = useState(false)
@@ -109,65 +124,66 @@ export default function Home() {
 
   return (
     <div className="">
-        <div className="">
-          <MenuContainer showMenu={showMenu}>
-              <div className='header'>
-                <div>
-                  <Image
-                    width={iconSize}
-                    height={iconSize}
-                    src="/logos/artworks.png"
-                    alt="Artworks logo"
-                  />
-                </div>
-                <Hamburger 
-                    size={48}
-                    toggled={showMenu}
-                    toggle={setShowMenu}
-                  />
-              </div>
-              {
-                showMenu ?
-                <motion.div 
-                  className='bg-menu'
-                  animate={{
-                    opacity: [0, 1],
-                    scaleX: [0.9, 1.02, 1]
-                  }}
-                  >
-                  <div className='menu-sections-buttons'>
-                    {
-                      data.map((d)=>{
-                        return <MenuButton
-                          key={uuid()}
-                          whileHover={{
-                            scale: 1.02,
-                          }}
-                        >
-                          <a href={`#${d.id}`}>{d.title}</a>
-                        </MenuButton>
-                      })
-                    }
-                  </div>
-                </motion.div>
-              : null
-            }
-          </MenuContainer>
-          <div className='w-full w-full lg:w-8/12 xl:w-6/12 px-2'>
-            <SectionsContainer>
-              <Sections />
-            </SectionsContainer>
+      <div className="">
+        <MenuContainer showMenu={showMenu}>
+          <div className='header'>
+            <div>
+              <Image
+                width={iconSize}
+                height={iconSize}
+                src="/logos/artworks.png"
+                alt="Artworks logo"
+              />
+            </div>
+            <Hamburger 
+              size={48}
+              toggled={showMenu}
+              toggle={setShowMenu}
+            />
           </div>
-
-          <div className="lg:mx-20 xl:w-1/2 py-4 relative z-20">
-            <Footer />
-          </div>
+    {
+      showMenu ?
+      <motion.div 
+        className='bg-menu'
+        animate={{
+          opacity: [0, 1],
+            scaleX: [0.9, 1.02, 1]
+        }}
+      >
+        <div className='menu-sections-buttons'>
+          {
+            data.map((d)=>{
+              return <MenuButton
+                key={uuid()}
+                whileHover={{
+                  scale: 1.02,
+                }}
+              >
+                <a href={`#${d.id}`}>{d.title}</a>
+              </MenuButton>
+              })
+          }
         </div>
-      <VideoContainer>
-        <video autoPlay muted loop>
-          <source src="/videos/medusa_01.webm" type="video/webm"/>
-        </video>
-      </VideoContainer>
-    </div>
-  );
+      </motion.div>
+      : null
+    }
+  </MenuContainer>
+  <div className='w-full w-full lg:w-8/12 xl:w-6/12 px-2'>
+    <SectionsContainer>
+      <ScrollDownIcon/>
+      <Sections />
+    </SectionsContainer>
+  </div>
+
+  <div className="lg:mx-20 xl:w-1/2 py-4 relative z-20">
+    <Footer />
+  </div>
+</div>
+<VideoContainer>
+  <video autoPlay muted loop>
+    <source src="/videos/medusa_01.webm" type="video/webm"/>
+  </video>
+</VideoContainer>
+      </div>
+    );
 }
