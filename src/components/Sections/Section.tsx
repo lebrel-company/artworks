@@ -13,6 +13,14 @@ const YellowTitle = styled.div`
   font-family: 'Gza', serif;
   font-weight: bold;
   line-height: .9;
+  @media(max-width:1200px){
+    font-size: 5rem;
+  }
+  @media(max-width:900px){
+    font-size: 4rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: ${colors.yellow};
+  }
 `
 
 export default function Section({data, ...rest}){

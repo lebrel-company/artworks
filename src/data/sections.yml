@@ -114,13 +114,5 @@
     - title: contact@artworks.com
       type: default
       subtitle: ""
-      buttonText: OUR BUSINESS
-      content: "We cover all areas of creative entertainment in-house,
-        which enables us to act as a one stop shop servicing all areas
-        that are necessary for our clients. We are content distributors,
-        licensors and managers. We create localized versions of original 
-        and external content at our post-production facilities and we
-        market and sell the final product as digital media or tangible
-        formats. We identify areas of opportunity, whether traditional
-        or novel, and we partner with companies who are seeking focused
-        strategies for their portfolio."
+      buttonText: ""
+      content: ""

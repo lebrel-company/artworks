@@ -28,6 +28,7 @@ const VideoContainer = styled.div`
     position: fixed;
     z-index: 0;
     top: 0;
+    right: 0;
     height: 100vh;
     width: 100vw;
   }
@@ -39,7 +40,7 @@ const menuGradient = `linear-gradient(90deg, ${colors.dark + '00'} 0%, ${colors.
 const MenuContainer = styled.div`
   top: 0;
   position: relative;
-  z-index: 20;
+  z-index: 30;
   .header{
     width: 100vw;
     display: flex;  
@@ -58,6 +59,10 @@ const MenuContainer = styled.div`
     position: fixed;
     top: 0;
     right: 0;
+    @media(max-width:1200px){ 
+      width: ${(props) => props.showMenu ? "100%" : ''};
+      background: ${colors.dark + 'EE'};
+    }
   }
   .menu-sections-buttons {
     display: flex;
@@ -148,7 +153,7 @@ export default function Home() {
               : null
             }
           </MenuContainer>
-          <div className='w-full md:w-7/12 lg:w-5/12 px-2'>
+          <div className='w-full w-full lg:w-8/12 xl:w-6/12 px-2'>
             <SectionsContainer>
               <Sections />
             </SectionsContainer>
