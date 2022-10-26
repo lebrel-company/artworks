@@ -182,10 +182,6 @@ export default function Home() {
       }
       <Sections />
     </SectionsContainer>
-
-  <div className="lg:mx-20 xl:w-1/2 py-4 relative z-20">
-    <Footer />
-  </div>
 </div>
 <VideoContainer>
   <video autoPlay muted loop>
