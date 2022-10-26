@@ -4,7 +4,8 @@ export const colors = {
         return this.dark + 'EE'
     },
     yellow: "#FFFF33",
-    orange: "#FF3300" 
+    orange: "#FF3300",
+    magenta: "#F0F"
 }
 
 

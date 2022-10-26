@@ -21,7 +21,6 @@ import useWindowSize from '../hooks/useWindowSize';
 import data from '../data/sections.yml'
 //= =============================================================================
 
-
 const VideoContainer = styled.div`
   video{
     object-fit: cover; 
@@ -35,7 +34,6 @@ const VideoContainer = styled.div`
 `
 
 const menuGradient = `linear-gradient(90deg, ${colors.dark + '00'} 0%, ${colors.dark} 90%);`
-
 
 const MenuContainer = styled.div`
   top: 0;
@@ -61,7 +59,7 @@ const MenuContainer = styled.div`
     right: 0;
     @media(max-width:1200px){ 
       width: ${(props) => props.showMenu ? "100%" : ''};
-      background: ${colors.dark + 'EE'};
+      background: ${colors.dark + 'CC'};
     }
   }
   .menu-sections-buttons {
@@ -93,6 +91,16 @@ const SectionsContainer = styled.div`
   z-index: 20;  
   height: 80vh;
   scroll-behavior: smooth;
+  width: 50vw;
+  @media(max-width: 1200px){
+    width: 70vw;
+  }
+  @media(max-width: 900px){
+    width: 90vw;
+  }
+  @media(max-width: 600px){
+    width: 100vw;
+  }
 `
 
 const ScrollDownIconContainer = styled.div`
@@ -117,6 +125,7 @@ export default function Home() {
   const [iconSize, setIconSize] = useState(120);
 
   useEffect(() => {
+    console.log(size)
     if (size.width < 400) {
       setIconSize(100);
     }
@@ -168,12 +177,12 @@ export default function Home() {
       : null
     }
   </MenuContainer>
-  <div className='w-full w-full lg:w-8/12 xl:w-6/12 px-2'>
     <SectionsContainer>
-      <ScrollDownIcon/>
+      {
+        size.width > 600 ? <ScrollDownIcon/> : null
+      }
       <Sections />
     </SectionsContainer>
-  </div>
 
   <div className="lg:mx-20 xl:w-1/2 py-4 relative z-20">
     <Footer />

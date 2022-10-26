@@ -107,12 +107,3 @@
             enabled: true
             text: COMING SOON
             href: 'https://artworks-ent.com/consumerproducts'
-
-- title: "Contact us"
-  id: 'contact-us'
-  sections: 
-    - title: webmaster@artwx-ent.com
-      type: default
-      subtitle: ""
-      buttonText: ""
-      content: ""

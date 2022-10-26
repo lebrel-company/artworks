@@ -9,8 +9,6 @@ const ScreenBlank = styled.div`
   height: ${props=> props?.height? props.height : '18vh'};
 `
 
-
-
 export default function Sections() {
   return (
     <div className="flex flex-row h-full">

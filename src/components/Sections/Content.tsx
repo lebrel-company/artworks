@@ -1,5 +1,13 @@
-import Bullet from './Bullet'
-import { v4 as uuid } from 'uuid'
+import Bullet from './Bullet';
+import { v4 as uuid } from 'uuid';
+import styled from 'styled-components';
+import { colors } from '../../shared/theme'
+
+
+const Title = styled.div`
+  color: ${colors.magenta}
+`
+
 
 export default function Content({data, ...rest}){
   if(data?.type === "bullets" && !Array.isArray(data?.content)){
@@ -17,7 +25,7 @@ export default function Content({data, ...rest}){
   }
 
   return <div {...rest}>
-    <div
+    <Title
       className="title"
       dangerouslySetInnerHTML={{
         __html: data.title,
