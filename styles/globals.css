@@ -84,7 +84,7 @@ body {
 }
 
 .container-scrollbar::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255);
+    background: rgba(0, 170, 255);
     border-radius: 4px;
 }
 
@@ -100,7 +100,7 @@ body {
 .container-scrollbar::-webkit-scrollbar-track {
     background: #ffffff;
     border-radius: 4px;
-    background: rgb(0, 150, 255);
+    background: rgba(0, 150, 255, .5);
 }
 
 .container-scrollbar::-webkit-scrollbar-track:hover,
