@@ -125,7 +125,6 @@ export default function Home() {
   const [iconSize, setIconSize] = useState(120);
 
   useEffect(() => {
-    console.log(size)
     if (size.width < 400) {
       setIconSize(100);
     }
