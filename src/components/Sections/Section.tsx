@@ -6,13 +6,14 @@ import Content from './Content'
 
 const YellowTitle = styled.div`
   color: ${colors.yellow + 40};
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: ${colors.yellow};
   text-transform: uppercase;
   font-size: 5rem;
   font-family: 'Gza', serif;
   font-weight: bold;
   line-height: .9;
+  text-shadow: ${colors.yellow} 0px 0px 6px;
   @media(max-width:1200px){
     font-size: 5rem;
   }
