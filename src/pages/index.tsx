@@ -73,7 +73,7 @@ const MenuContainer = styled.div`
 `
 
 const MenuButton = styled(motion.div)`
-  font-size: 1.3rem; 
+  font-size: 2rem; 
   font-family: 'Gza', sans-serif;
   font-style: normal;
   color: #FFF;
@@ -81,8 +81,13 @@ const MenuButton = styled(motion.div)`
   letter-spacing: .5rem;
   cursor: pointer;
   text-transform: uppercase;
-  :hover{
-    border-bottom: 2px solid;
+  text-shadow: #FFF 0px 0px 6px;
+  text-align: center;
+  @media(max-width: 600px){
+    font-size: 1.5rem;
+  }
+  @media(max-width: 300px){
+    font-size: 1rem;
   }
 `
 
@@ -91,7 +96,7 @@ const SectionsContainer = styled.div`
   z-index: 20;  
   height: 80vh;
   scroll-behavior: smooth;
-  width: 50vw;
+  width: 40vw;
   @media(max-width: 1200px){
     width: 70vw;
   }
