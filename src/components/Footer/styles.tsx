@@ -10,6 +10,7 @@ export const Wrapper = styled(motion.div)`
   justify-content: space-between;
   padding: 2rem 10%;
   margin: 10% 0;
+  font-family: Avenir, serif;
   /* From https://css.glass */
   background: rgba(164, 90, 255, 0.07);
   border-radius: 8px;
@@ -17,7 +18,6 @@ export const Wrapper = styled(motion.div)`
   backdrop-filter: blur(9.7px);
   -webkit-backdrop-filter: blur(9.7px);
   border: 1px solid rgba(164, 90, 255, 0.3);
-  font-family: Avenir, serif;
   @media (max-width: 1600px){
     padding: 2rem 1rem;
   } 
@@ -42,7 +42,7 @@ export const LeftCol = styled.div`
       padding: 1rem;   
     }
   }
-  @media(max-width: 900px){
+  @media(max-width: 1024px){
     flex-direction: column;
   }
 `
