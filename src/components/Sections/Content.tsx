@@ -5,7 +5,21 @@ import { colors } from '../../shared/theme'
 
 
 const Title = styled.div`
-  color: ${colors.magenta}
+  color: ${colors.magenta};
+  font-family: TimesNewRoman, serif;
+  font-style: italic;
+`
+const BlueText = styled.div`
+  color: ${colors.blue};
+  text-transform: uppercase;
+  text-family: Avenir, sans-serif;  
+  letter-spacing: .5rem;
+  font-size: 1.5rem;
+`
+const Parragraph = styled.div`
+  text-family: Avenir, sans-serif;  
+  font-size: 1rem;
+  letter-spacing: .1rem;
 `
 
 
@@ -31,13 +45,12 @@ export default function Content({data, ...rest}){
         __html: data.title,
       }}
     />
-    <div
-      className="sub-button"
+    <BlueText
       dangerouslySetInnerHTML={{
         __html: data.buttonText,
       }}
     />
-    <div
+    <Parragraph
       className="font-poppins text-justify"
       dangerouslySetInnerHTML={{
         __html: data.content,

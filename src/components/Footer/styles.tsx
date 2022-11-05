@@ -63,6 +63,7 @@ export const RightCol = styled.div`
   display: flex;
   flex-direction: row;
   margin: 200px 0px 0px 0px;
+  font-family: GzaRegular, serif;
   @media(max-width: 1400px){
     margin: 0px;
     justify-content: center;
@@ -79,7 +80,6 @@ export const LinksSection = styled.div`
     text-align: left;
     padding: 1rem;
     font-size: 1.5rem;
-    font-family: AvenirRoman, serif;
     font-style: normal;
     color: ${colors.blue};
     text-transform: uppercase;
@@ -89,7 +89,6 @@ export const LinksSection = styled.div`
     text-align: left;
     padding: 0rem 1rem;
     font-size: 1.3rem;
-    font-family: AvenirRoman, serif;
     font-style: normal;
     display: flex;
     flex-direction: column;

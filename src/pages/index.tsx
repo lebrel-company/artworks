@@ -26,7 +26,7 @@ const VideoContainer = styled.div`
     object-fit: cover; 
     position: fixed;
     z-index: -1;
-    top: 0;
+;   top: 0;
     right: 0;
     height: 100vh;
     width: 100vw;
@@ -93,18 +93,23 @@ const MenuButton = styled(motion.div)`
 
 const SectionsContainer = styled.div`
   position: relative;
+  left: 72px;
   z-index: 20;  
   height: 80vh;
-  scroll-behavior: smooth;
   width: 40vw;
+  scroll-behavior: smooth;
+  @media(max-width: 1600px){
+    width: 50vw;
+  }
   @media(max-width: 1200px){
     width: 70vw;
   }
-  @media(max-width: 900px){
-    width: 90vw;
+  @media(max-width: 1000px){
+    width: 80vw;
   }
-  @media(max-width: 600px){
-    width: 100vw;
+  @media(max-width: 800px){
+    width: 90vw;
+    left: 0px;
   }
 `
 
