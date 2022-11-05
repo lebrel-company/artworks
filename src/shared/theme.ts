@@ -5,7 +5,8 @@ export const colors = {
     },
     yellow: "#FFFF33",
     orange: "#FF3300",
-    magenta: "#F0F"
+    magenta: "#F0F",
+    blue: "#0AF"
 }
 
 

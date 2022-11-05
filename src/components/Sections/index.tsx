@@ -6,7 +6,7 @@ import Section from './Section'
 import data from '../../data/sections.yml'
 
 const ScreenBlank = styled.div`
-  height: ${props=> props?.height? props.height : '18vh'};
+  height: ${props=> props?.height? props.height : '2vh'};
 `
 
 export default function Sections() {
@@ -43,7 +43,6 @@ export default function Sections() {
           `} 
           style={{ direction: "ltr" }}
         >
-          <ScreenBlank/>
           {
             data.map((d)=>( 
               <Section data={d} key={uuid()} id={d.id}/>

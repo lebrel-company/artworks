@@ -20,8 +20,22 @@
 }
 
 @font-face {
-  font-family: "Gza";
-  src: url('../fonts/Gza-RegularItalic.ttf');
+  font-family: "Avenir";
+  src: url('../fonts/AvenirLTStd-Medium.otf');
   font-weight: normal;
-  font-style: italic;
+  fornt-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirRoman";
+  src: url('../fonts/AvenirLTStd-Roman.otf');
+  font-weight: normal;
+  fornt-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirBook";
+  src: url('../fonts/AvenirLTStd-Book.otf');
+  font-weight: normal;
+  fornt-style: normal;
 }

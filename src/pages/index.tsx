@@ -11,7 +11,7 @@ import Image from 'next/image'
 // layouts:
 // -- -- -- -- -- -- -- -- -- -- -- -- -- --
 // components:
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import Sections from "../components/Sections";
 // -- -- -- -- -- -- -- -- -- -- -- -- -- --
 // project:
@@ -25,7 +25,7 @@ const VideoContainer = styled.div`
   video{
     object-fit: cover; 
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     top: 0;
     right: 0;
     height: 100vh;
@@ -187,6 +187,7 @@ export default function Home() {
       }
       <Sections />
     </SectionsContainer>
+    <Footer/>
 </div>
 <VideoContainer>
   <video autoPlay muted loop>
