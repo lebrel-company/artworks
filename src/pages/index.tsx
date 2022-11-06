@@ -24,11 +24,11 @@ import data from '../data/sections.yml'
 const VideoContainer = styled.div`
   video{
     object-fit: cover; 
-    position: fixed;
+    position: absolute;
     z-index: -1;
 ;   top: 0;
     right: 0;
-    height: 100vh;
+    height: 130vh;
     width: 100vw;
   }
 `
@@ -59,7 +59,12 @@ const MenuContainer = styled.div`
     right: 0;
     @media(max-width:1200px){ 
       width: ${(props) => props.showMenu ? "100%" : ''};
-      background: ${colors.dark + 'CC'};
+      /* From https://css.glass */
+      background: rgba(18, 5, 56, 0.62);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(17.8px);
+      -webkit-backdrop-filter: blur(17.8px);
+      border: 1px solid rgba(18, 5, 56, 0.3);
     }
   }
   .menu-sections-buttons {
@@ -93,10 +98,11 @@ const MenuButton = styled(motion.div)`
 
 const SectionsContainer = styled.div`
   position: relative;
-  left: 72px;
+  left: 80px;
   z-index: 20;  
-  height: 80vh;
+  height: 100vh;
   width: 40vw;
+  padding: 0rem 0rem 5rem 0rem;
   scroll-behavior: smooth;
   @media(max-width: 1600px){
     width: 50vw;
@@ -128,6 +134,14 @@ const ScrollDownIcon = ()=>{
   </ScrollDownIconContainer>
 }
 
+const HamburgerWrapper = styled.div`
+  @media(max-width: 1200px){
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    padding: 2rem;
+  }
+`
 
 export default function Home() {
   const [showMenu, setShowMenu] = useState(false)
@@ -153,11 +167,13 @@ export default function Home() {
                 alt="Artworks logo"
               />
             </div>
+            <HamburgerWrapper>
             <Hamburger 
               size={48}
               toggled={showMenu}
               toggle={setShowMenu}
             />
+            </HamburgerWrapper> 
           </div>
     {
       showMenu ?

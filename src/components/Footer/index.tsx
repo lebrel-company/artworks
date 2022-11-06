@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link'
 import {
   Wrapper,
+  BgImageContainer,
   LeftCol,
   BigTitle,
   XSDiv, 
@@ -11,15 +12,18 @@ import {
 
 
 
-export default function Footer(){
 
+export default function Footer(){
   return <>
   {
     <Wrapper>
+      <BgImageContainer>
+        <img src='/footer_bg.png'/>
+      </BgImageContainer>
       <LeftCol>
         <div className='contents'>
           <div>
-            <Image height={110} width={110} src='/logos/artworks-white.png'/>
+            <Image height={120} width={120} src='/logos/artworks-white.png'/>
           </div>
           <div>
             <XSDiv/>

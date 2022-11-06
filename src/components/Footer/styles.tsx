@@ -3,26 +3,61 @@ import {motion} from 'framer-motion';
 import {colors} from '../../shared/theme';
 
 export const Wrapper = styled(motion.div)`
-  min-height: 20rem;
   display: flex;
   flex-direction: row;
   text-transform: capitalize;
   justify-content: space-between;
-  padding: 2rem 10%;
-  margin: 10% 0;
   font-family: Avenir, serif;
-  /* From https://css.glass */
-  background: rgba(164, 90, 255, 0.07);
-  border-radius: 8px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9.7px);
-  -webkit-backdrop-filter: blur(9.7px);
-  border: 1px solid rgba(164, 90, 255, 0.3);
+  transform: translate(0px, 0px);
+  padding: 2% 5%;
   @media (max-width: 1600px){
     padding: 2rem 1rem;
   } 
   @media (max-width: 1400px){
     flex-direction: column;
+  }
+`
+
+export const BgImageContainer = styled.div`
+  width: 100vw;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  margin: 0px;
+  img { 
+    width: 100vw;
+    height: 40rem;
+    object-fit: cover;
+  }
+  @media(max-width: 1400px){
+    img { 
+      height: 37rem;
+      object-fit: cover;
+    }
+  }
+  @media(max-width: 1200px){
+    left: 0px;
+    bottom: 0px;
+    img { 
+      width: 100vw;
+      height: 50rem;
+      object-fit: cover;
+    }
+  }
+  @media(max-width: 900px){
+    img { 
+      width: 100vw;
+      height: 70rem;
+      object-fit: cover;
+    }
+  }
+  @media(max-width: 600px){
+    img { 
+      width: 100vw;
+      height: 72rem;
+      object-fit: cover;
+    }
   }
 `
 
@@ -39,18 +74,32 @@ export const LeftCol = styled.div`
       display: none;
     }
     .contents > * {
-      padding: 1rem;   
+      padding: 2rem .2rem 2.5rem 0.2rem;   
+      margin: 0rem;
     }
   }
-  @media(max-width: 1024px){
+  @media(max-width: 1200px){
     flex-direction: column;
+    text-align: center;
+    .contents > * {
+      padding: .5rem;   
+      margin: .5rem;
+    }
   }
 `
 export const BigTitle = styled.div`
-  font-size: 3.2rem;
-  line-height: 3.2rem;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
   font-family: Gza, serif;
   text-shadow: #FFF 0px 0px 6px;
+  min-width: 30rem;
+  @media(max-width: 1400px){
+    font-size: 2.8rem;
+  }
+  @media(max-width: 1200px){
+    font-size: 2.8rem;
+    min-width: 30rem;
+  }
 `
 export const XSDiv = styled.hr`
   width: 30px;
@@ -65,7 +114,7 @@ export const RightCol = styled.div`
   margin: 200px 0px 0px 0px;
   font-family: GzaRegular, serif;
   @media(max-width: 1400px){
-    margin: 0px;
+    margin: 1.2rem 0rem;
     justify-content: center;
   }
   @media(max-width: 900px){
@@ -76,6 +125,7 @@ export const RightCol = styled.div`
 export const LinksSection = styled.div`
   border-top: solid 1px;
   margin: 0rem 2rem;
+  min-width: 15rem;
   .title {
     text-align: left;
     padding: 1rem;
@@ -101,6 +151,9 @@ export const LinksSection = styled.div`
     margin: 0rem 1rem;
     .title {
       letter-spacing: .5rem;
+    }
+    .links {
+      font-size: 1.1rem;
     }
   }
   @media(max-width: 1400px){
@@ -128,8 +181,8 @@ export const LinksSection = styled.div`
   @media(max-width: 900px){
     margin: 0rem 0rem;
     padding: 1rem;
+    margin: auto;
     .title{
-      padding: 0px;
       font-size: 1rem;
       letter-spacing: .3rem;
     }
