@@ -37,7 +37,7 @@ export default function Footer(){
       </LeftCol>
       <RightCol>
         <LinksSection>
-          <div className='title'>contact</div>
+          <div id="contact-us" className='title'>contact</div>
           <div className='links'>
             <Link href='https://matheuschami.wixsite.com/website/contact-8'>
               <a target="_blank">contact us</a>

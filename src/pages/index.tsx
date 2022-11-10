@@ -135,12 +135,10 @@ const ScrollDownIcon = ()=>{
 }
 
 const HamburgerWrapper = styled.div`
-  @media(max-width: 1200px){
-    position: fixed;
-    right: 0px;
-    top: 0px;
-    padding: 2rem;
-  }
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  padding: 2rem;
 `
 
 export default function Home() {
@@ -168,13 +166,13 @@ export default function Home() {
               />
             </div>
             <HamburgerWrapper>
-            <Hamburger 
+              <Hamburger 
               size={48}
               toggled={showMenu}
               toggle={setShowMenu}
             />
-            </HamburgerWrapper> 
-          </div>
+          </HamburgerWrapper> 
+        </div>
     {
       showMenu ?
       <motion.div 
@@ -205,19 +203,19 @@ export default function Home() {
       : null
     }
   </MenuContainer>
-    <SectionsContainer>
+  <SectionsContainer>
       {
         size.width > 600 ? <ScrollDownIcon/> : null
       }
       <Sections />
     </SectionsContainer>
     <Footer/>
+  </div>
+  <VideoContainer>
+    <video autoPlay muted loop>
+      <source src="/videos/medusa_01.webm" type="video/webm"/>
+    </video>
+  </VideoContainer>
 </div>
-<VideoContainer>
-  <video autoPlay muted loop>
-    <source src="/videos/medusa_01.webm" type="video/webm"/>
-  </video>
-</VideoContainer>
-      </div>
     );
 }

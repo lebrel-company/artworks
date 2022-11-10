@@ -68,8 +68,9 @@ function BulletContents({data, ...rest}){
 
 
 export default function Bullet({data, ...rest}){
-  const num = data.title.split(" ")[0]
-  const title = data.title.split(" ")[1]
+  const splittedTitle = data.title.split(" ")
+  const num = splittedTitle[0]
+  const title = splittedTitle.slice(1, splittedTitle.length).join(' ')
   const [showDetails, setShowDetails] = useState(false)
   const [bullet, setBullet] = useState(num)
 

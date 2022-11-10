@@ -12,6 +12,8 @@ const YellowTitle = styled.div`
   font-weight: bold;
   line-height: .9;
   text-shadow: ${colors.yellow} 0px 0px 6px;
+  padding: 0rem;
+  margin: 0rem;
   @media(max-width:1900px){
     font-size: 6rem;
   }
@@ -36,6 +38,7 @@ export default function Section({data, ...rest}){
         __html: data.title
       }} 
     />
+    <YellowTitle>-</YellowTitle>
     {
       data.sections.map(
         (s)=>(<Content key={uuid()} data={s}/>)
