@@ -28,7 +28,7 @@ export default function Footer(){
           <div>
             <XSDiv/>
           </div>
-          <BigTitle>a new beginning<br/>in entertainment</BigTitle>
+          <BigTitle>A New Beginning<br/>in Entertainment</BigTitle>
           <div>
             <div>Ⓒ 2022 Artworks Entertainment SARL</div>
             <div>All trademarks are the property of their respective owners. All rights reserved.</div>

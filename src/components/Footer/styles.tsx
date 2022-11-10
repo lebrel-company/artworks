@@ -93,6 +93,7 @@ export const BigTitle = styled.div`
   font-family: Gza, serif;
   text-shadow: #FFF 0px 0px 6px;
   min-width: 30rem;
+  text-transform: none;
   @media(max-width: 1400px){
     font-size: 2.8rem;
   }
