@@ -15,6 +15,9 @@ const YellowTitle = styled.div`
   @media(max-width:1900px){
     font-size: 6rem;
   }
+  @media(max-width:1700px){
+    font-size: 5rem;
+  }
   @media(max-width:1600px){
     font-size: 4rem;
   }
@@ -28,8 +31,11 @@ const YellowTitle = styled.div`
 
 export default function Section({data, ...rest}){
   return <div {...rest}>
-    <YellowTitle>{data.title}</YellowTitle>
-    <YellowTitle>–</YellowTitle>
+    <YellowTitle
+      dangerouslySetInnerHTML={{
+        __html: data.title
+      }} 
+    />
     {
       data.sections.map(
         (s)=>(<Content key={uuid()} data={s}/>)

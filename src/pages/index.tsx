@@ -26,7 +26,7 @@ const VideoContainer = styled.div`
     object-fit: cover; 
     position: absolute;
     z-index: -1;
-;   top: 0;
+    top: 0;
     right: 0;
     height: 130vh;
     width: 100vw;
@@ -193,10 +193,13 @@ export default function Home() {
                   scale: 1.02,
                 }}
               >
-                <a href={`#${d.id}`}>{d.title}</a>
+                <a href={`#${d.id}`}>{d.menu}</a>
               </MenuButton>
               })
           }
+          <MenuButton>
+            <a href='#contact-us'>contact us</a>
+          </MenuButton>
         </div>
       </motion.div>
       : null

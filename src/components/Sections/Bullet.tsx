@@ -7,8 +7,8 @@ import { colors } from '../../shared/theme'
 const BulletLayout = styled.div`
   .title{
     padding: .1rem .4rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.7rem;
+    font-family: Avenir, sans-serif;
+    font-size: 1.6rem;
     color: ${colors.orange};
     opacity: 0.8;
     font-style: normal;
@@ -16,6 +16,11 @@ const BulletLayout = styled.div`
     &:hover{
       cursor: pointer;
       opacity: 1;
+      color: white;
+    }
+    &:hover::before{
+      content: ">  ";
+      color: ${colors.orange};
     }
   }
   .bullet-content{
@@ -63,7 +68,10 @@ function BulletContents({data, ...rest}){
 
 
 export default function Bullet({data, ...rest}){
+  const num = data.title.split(" ")[0]
+  const title = data.title.split(" ")[1]
   const [showDetails, setShowDetails] = useState(false)
+  const [bullet, setBullet] = useState(num)
 
   const openDetails = (e)=>{
     e.preventDefault() 
@@ -71,8 +79,11 @@ export default function Bullet({data, ...rest}){
   }
 
   return <BulletLayout {...rest}>
-    <button type="button" className='title' onClick={openDetails}>
-      {data.title}
+    <button 
+      onMouseEnter={()=>{setBullet("")}}
+      onMouseLeave={()=>{setBullet(num)}}
+      type="button" className='title' onClick={openDetails}>
+      {bullet + ' '}{title}
     </button>
     {
       showDetails

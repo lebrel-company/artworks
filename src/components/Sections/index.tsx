@@ -12,7 +12,7 @@ const ScreenBlank = styled.div`
 export default function Sections() {
   return (
     <div className="flex flex-row h-full">
-      <div className="flex flex-col justify-between py-2 md:py-12">
+      <div className="flex flex-col justify-between py-2 md:py-12 uppercase">
         <div className="v-text">
           Our History
         </div>

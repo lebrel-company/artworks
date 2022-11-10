@@ -1,4 +1,5 @@
 - title: "Our\nHistory"
+  menu: "Our History"
   id: 'our-history'
   sections:
     - title: Bring entertainment to the world
@@ -19,7 +20,8 @@
         genres and generations."
 
 
-- title: "Who we\nare today"
+- title: "Who we<br/>are today"
+  menu: "Who we are today"
   id: 'who-we-are'
   sections:
     - title: An entertainment company with multiple talents
@@ -40,7 +42,8 @@
         leading companies in the entertainment, production, film,
         television, digital content and licensing industries."
 
-- title: "What\nwe do"
+- title: "What<br/>we do"
+  menu: "What we do"
   id: 'what-we-do'
   sections: 
     - title: Our areas of expertise work seamlessly together
@@ -61,7 +64,7 @@
       subtitle: ""
       buttonText: ""
       content: 
-        - title: "01.Film and Television"
+        - title: "01. Film and Television"
           subtitle: Media Content & Film Distribution
           content: "We handle the production, acquisitions, distribution, 
             and/or representation of live action and animation movies 
@@ -72,7 +75,7 @@
             visibility: true
             text: COMING SOON
             href: 'https://artworks-ent.com/home'
-        - title: "02.Animation Production"
+        - title: "02. Animation Production"
           subtitle: Dubbing and Post-production
           content: "Arttack, with operations in the USA, Mexico and 
             Brussels, is a collective of animators, artists, 
@@ -83,7 +86,7 @@
             visibility: true
             text: COMING SOON
             href: '/'
-        - title: "03.Artworks Digital Studio"
+        - title: "03. Artworks Digital Studio"
           subtitle: Licensing & Merchandising
           content: "We operate our own post-production facilities, 
             thus ensuring high quality and speed of our dubbing 
@@ -96,7 +99,7 @@
             visibility: true
             text: COMING SOON
             href: 'https://artworks-digital.com'
-        - title: "04.Consumer Products"
+        - title: "04. Consumer Products"
           subtitle: ""
           content: "We work as dedicated brand ambassadors opening 
             an endless world of opportunities. Making products 

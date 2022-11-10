@@ -8,13 +8,14 @@ const Title = styled.div`
   color: ${colors.magenta};
   font-family: TimesNewRoman, serif;
   font-style: italic;
+  font-size:1.8rem;
 `
 const BlueText = styled.div`
   color: ${colors.blue};
   text-transform: uppercase;
   text-family: Avenir, sans-serif;  
   letter-spacing: .5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 `
 const Parragraph = styled.div`
   text-family: Avenir, sans-serif;  

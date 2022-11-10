@@ -111,7 +111,7 @@ export const XSDiv = styled.hr`
 export const RightCol = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 200px 0px 0px 0px;
+  margin: 160px 0px 0px 0px;
   font-family: GzaRegular, serif;
   @media(max-width: 1400px){
     margin: 1.2rem 0rem;
@@ -129,16 +129,17 @@ export const LinksSection = styled.div`
   .title {
     text-align: left;
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-style: normal;
     color: ${colors.blue};
     text-transform: uppercase;
     letter-spacing: 1rem;
+    line-height: 1.2rem;
   }
   .links {
     text-align: left;
     padding: 0rem 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-style: normal;
     display: flex;
     flex-direction: column;
