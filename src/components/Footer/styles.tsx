@@ -64,6 +64,9 @@ export const BgImageContainer = styled.div`
 export const LeftCol = styled.div`
   display: flex;
   flex-direction: column;
+  .legal {
+    font-size: .7rem;
+  }
   .contents > * {
     padding: 1rem;
   }
