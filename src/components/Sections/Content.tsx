@@ -5,12 +5,15 @@ import { colors } from '../../shared/theme'
 
 
 const textPadding = '.7rem'
-const Title = styled.div`
+const MagentaText = styled.div`
   color: ${colors.magenta};
   font-family: TimesNewRoman, serif;
   font-style: italic;
-  font-size:1.8rem;
+  font-size: 1.8rem;
   padding: 0rem 0rem ${textPadding} 0rem;
+  @media (max-width:1400px){
+    font-size: 1.3rem;
+  }
 `
 const BlueText = styled.div`
   color: ${colors.blue};
@@ -24,6 +27,9 @@ const Parragraph = styled.div`
   text-family: Avenir, sans-serif;  
   font-size: 1rem;
   letter-spacing: .1rem;
+  @media (max-width: 1400px){
+    font-size: .8rem;
+  }
 `
 
 
@@ -43,8 +49,7 @@ export default function Content({data, ...rest}){
   }
 
   return <div {...rest}>
-    <Title
-      className="title"
+    <MagentaText
       dangerouslySetInnerHTML={{
         __html: data.title,
       }}

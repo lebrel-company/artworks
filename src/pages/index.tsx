@@ -1,20 +1,13 @@
-// libraries:
 import { useState, useEffect } from 'react'
 import { v4 as uuid } from 'uuid'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { Cross as Hamburger } from 'hamburger-react';
 import Image from 'next/image'
-// -- -- -- -- -- -- -- -- -- -- -- -- -- --
-// Contexts:
-// -- -- -- -- -- -- -- -- -- -- -- -- -- --
-// layouts:
-// -- -- -- -- -- -- -- -- -- -- -- -- -- --
-// components:
+
 import Footer from "../components/Footer";
 import Sections from "../components/Sections";
-// -- -- -- -- -- -- -- -- -- -- -- -- -- --
-// project:
+
 import {colors} from '../shared/theme'
 import useWindowSize from '../hooks/useWindowSize';
 // @ts-ignore
@@ -105,7 +98,7 @@ const SectionsContainer = styled.div`
   padding: 0rem 0rem 5rem 0rem;
   scroll-behavior: smooth;
   @media(max-width: 1600px){
-    width: 50vw;
+    width: 38vw;
   }
   @media(max-width: 1200px){
     width: 70vw;
