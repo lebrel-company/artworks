@@ -39,7 +39,7 @@ export default function Footer(){
         <LinksSection>
           <div id="contact-us" className='title'>contact</div>
           <div className='links'>
-            <Link href='https://matheuschami.wixsite.com/website/contact-8'>
+            <Link href='https://www.artworks-ent.com/contact-us'>
               <a target="_blank">contact us</a>
             </Link>
             <Link href='/'>
